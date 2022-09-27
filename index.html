@@ -27,12 +27,13 @@
     <div class="myWeek1">
         <h1>Data Science for Economists.</h1>
         
-        <h3>Covid-19</h3>
-        <p>The first chart tracks Covid-19 cases by UK region.</p>
+        <h3>UK Renewable Energy Sources</h3>
+        <p>The first chart looks at the production of energy through renewable sources in the UK.</p>
         <div class="chart" id="Chart1"></div>
+        <!-- this defines the chart -->
 
-        <h3>Productivity puzzle</h3>
-        <p>My second chart looks at productivity in the UK</p>
+        <h3>US Gun Deahts and Income by State</h3>
+        <p>My second chart shows a scatter of gun deaths and median income for US states.</p>
         <div class="chart" id="Chart2"> </div>
     </div> 
 </body>
@@ -40,8 +41,9 @@
 
 <script>
     //Define charts:
-    var myChart1 = "chart1_covidUKRegions.json";
-    var myChart2 = "chart2_ukProductivity.json";
+    var myChart1 = "chart1_renewables_source.json";
+    var myChart2 = "chart2_us_gundeath.json";
+    // these 2 are the links we need to change for the homework
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
