@@ -27,28 +27,82 @@
     <div class="myWeek1">
         <h1>Finn Trinci: Data Science</h1>
         
-        <container class="container">
-        <h3>UK Renewable Energy Sources</h3>
-        <p>The first chart looks at the production of energy through renewable sources in the UK.</p>
-        <div class="chart" id="Chart1"></div>
-        <!-- this defines the chart -->
+        <hr>
+        
+        <h2>Week 1</h2>
+        <p> In week 1 we learned how to embed charts, these charts were chosen from the <a href="rapidcharts.io" target="_blank">Rapid Charts</a> repository.</p>
+        
+        <hr>
 
-        <h3>US Gun Deaths and Income by State</h3>
-        <p>My second chart shows a scatter of gun deaths and median income for US states.</p>
-        <div class="chart" id="Chart2"> </div>
-    </container>
+        <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+        <container class="container">
+
+            <div id="text">
+                <h3>Renewable Energy Resources</h3>
+                <p> The first chart looks at the production of energy <br>through renewable sources in the UK.</p>
+            
+          
+            <div class="chart" id="Chart1"></div>
+            </div>
+          
+            <div id="text2">
+                <h3>US Gun Deaths and Income by State</h3>
+                <p>My second chart shows a scatter of gun deaths<br> and median income for US states.</p>
+            <div class="chart" id="Chart2"> </div>
+            </div>
+        </container>
+
+        <!-- Now starts week2 -->
+        <hr>
+        <h2>Week 2</h2>
+        <p>This week we moved onto writing .json files to create graphs where the data is hosted on our Github. We looked to improve
+            <br>
+            on a graph taken from a FT article, to make the data story more robust.
+        </p>
+        <hr>
+
+
+<!-- second week graphs and text are held in this container. -->
+        <container class="container">
+
+            <div id="text">
+                <h3>IMF Lending Chart from FT</h3>
+                <p> The first chart is recreated from a FT article. <br> it is telling a story of rising outstanding credit <br> over the studied period.</p>
+            
+          
+            <div class="chart" id="IMFChart1"></div>
+            </div>
+          
+            <div id="text2">
+                <h3>'Fixed' Chart</h3>
+                <p>This chart shows the same lending figures as a <br> percentage of global GDP in each year. <br> The same data tells a different story. </p>
+            <div class="chart" id="IMFChart2"> </div>
+            </div>
+        </container>
+
+
+
     </div> 
+
+
 </body>
 
+
+<!-- I need to embed the original chart, then 'fix' the chart and  embed this new chart.
+Needs to be in a seperate subheading. -->
 <script>
     //Define charts:
     var myChart1 = "chart1_renewables_source.json";
     var myChart2 = "chart2_us_gundeath.json";
+    var IMFChart1 = "IMF_lending.json"
+    var IMFChart2 = "IMF_lending_fixed.json"
     // these 2 link the MyChart var to the .json chart files
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#IMFChart1', IMFChart1);
+    vegaEmbed('#IMFChart2', IMFChart2);
 </script>
 
 </html>
