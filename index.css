@@ -54,7 +54,7 @@ hr{
     margin-bottom: 10px;
     border: transparent;
     color: black;
-    width: 90%;
+    width: 70%;
     border-top: 3px solid ;
     border-color: rgb(208, 157, 216);
     border-radius: 40px;
@@ -83,11 +83,11 @@ hr{
 /* dot is how we assign things to a class, in this case class is myWeek1 */
 .myWeek1{
     margin: auto;
-    max-width: 70%;
+    max-width: screen;
     background-color: rgb(240, 227, 245);
 
     border-width: 15px;
-    border-style: solid;
+    border-style: none;
     border-radius: 2px;
     border-color: rgb(208, 157, 216)
     
@@ -119,11 +119,9 @@ hr{
     align-content: center;
   }
 
-/* can also change properties of a specific chart 
-NEED TO FIND OUT HOW THIS WORKS*/
-#Chart1{
-    border-color: rgb(208, 157, 216);
-
+/* can also change properties of a specific chart, this chart was displaying left-of-center so I added some padding*/
+#ItalyGini{
+    padding-left:125px;
 }
 
 #text {

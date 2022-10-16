@@ -80,30 +80,51 @@
             </div>
         </container>
 
+<!-- Third Week graph is in this container -->
+        <hr>
+        <h2>Week 3</h2>
+        <p>This week we looked at moving a dataset from a .csv file into our .json files using python in Google CoLab
+        </p>
         <hr>
 
+        <container class="container">
 
+            <div id="text">
+                <h3>Income Shares in Italy</h3>
+                <p> This chart looks at the disparity in total income between the top 1% of earners and bottom 50% of earners in Italy</p>
+            
+        
+            <div class="chart" id="ItalyGini"></div>
+            </div>
+            <hr>
+        </container>
     </div> 
+
+
+
+</div> 
+
 
 
 </body>
 
 
-<!-- I need to embed the original chart, then 'fix' the chart and  embed this new chart.
-Needs to be in a seperate subheading. -->
+<!-- Chart Embeds -->
 <script>
     //Define charts:
     var myChart1 = "chart1_renewables_source.json";
     var myChart2 = "chart2_us_gundeath.json";
     var IMFChart1 = "IMF_lending.json"
     var IMFChart2 = "IMF_lending_fixed.json"
-    // these 2 link the MyChart var to the .json chart files
+    var ItalyGini = 'italy_gini.json'
+    // these link the MyChart var to the .json chart files
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
     vegaEmbed('#IMFChart1', IMFChart1);
     vegaEmbed('#IMFChart2', IMFChart2);
+    vegaEmbed('#ItalyGini', ItalyGini);
 </script>
 
 </html>

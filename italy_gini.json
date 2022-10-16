@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Stock prices of 5 Tech Companies over Time.",
+    
+    "title":{"text":"Income Shares in Italy", 
+      "subtitle":"Income Shares of Top 1% of Earners and Bottom 50% of Earners in Italy. Data Scource: WID",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+      },
+    
+    
+    
+    "data": { "values": [{"Country": "italy", "Year": "1995", "percent": 0.1637, "category": "top1"}, {"Country": "italy", "Year": "1996", "percent": 0.1657, "category": "top1"}, {"Country": "italy", "Year": "1997", "percent": 0.1677, "category": "top1"}, {"Country": "italy", "Year": "1998", "percent": 0.1708, "category": "top1"}, {"Country": "italy", "Year": "1999", "percent": 0.1763, "category": "top1"}, {"Country": "italy", "Year": "2000", "percent": 0.1854, "category": "top1"}, {"Country": "italy", "Year": "2001", "percent": 0.201, "category": "top1"}, {"Country": "italy", "Year": "2002", "percent": 0.2134, "category": "top1"}, {"Country": "italy", "Year": "2003", "percent": 0.2089, "category": "top1"}, {"Country": "italy", "Year": "2004", "percent": 0.2069, "category": "top1"}, {"Country": "italy", "Year": "2005", "percent": 0.2123, "category": "top1"}, {"Country": "italy", "Year": "2006", "percent": 0.2183, "category": "top1"}, {"Country": "italy", "Year": "2007", "percent": 0.2109, "category": "top1"}, {"Country": "italy", "Year": "2008", "percent": 0.2061, "category": "top1"}, {"Country": "italy", "Year": "2009", "percent": 0.2076, "category": "top1"}, {"Country": "italy", "Year": "2010", "percent": 0.2197, "category": "top1"}, {"Country": "italy", "Year": "2011", "percent": 0.2212, "category": "top1"}, {"Country": "italy", "Year": "2012", "percent": 0.2355, "category": "top1"}, {"Country": "italy", "Year": "2013", "percent": 0.234, "category": "top1"}, {"Country": "italy", "Year": "2014", "percent": 0.2551, "category": "top1"}, {"Country": "italy", "Year": "2015", "percent": 0.2247, "category": "top1"}, {"Country": "italy", "Year": "2016", "percent": 0.22, "category": "top1"}, {"Country": "italy", "Year": "2017", "percent": 0.2211, "category": "top1"}, {"Country": "italy", "Year": "2018", "percent": 0.221, "category": "top1"}, {"Country": "italy", "Year": "2019", "percent": 0.2209, "category": "top1"}, {"Country": "italy", "Year": "2020", "percent": 0.2209, "category": "top1"}, {"Country": "italy", "Year": "2021", "percent": 0.2209, "category": "top1"}, {"Country": "italy", "Year": "1995", "percent": 0.1022, "category": "bottom50"}, {"Country": "italy", "Year": "1996", "percent": 0.0994, "category": "bottom50"}, {"Country": "italy", "Year": "1997", "percent": 0.0967, "category": "bottom50"}, {"Country": "italy", "Year": "1998", "percent": 0.0939, "category": "bottom50"}, {"Country": "italy", "Year": "1999", "percent": 0.0903, "category": "bottom50"}, {"Country": "italy", "Year": "2000", "percent": 0.0862, "category": "bottom50"}, {"Country": "italy", "Year": "2001", "percent": 0.0748, "category": "bottom50"}, {"Country": "italy", "Year": "2002", "percent": 0.0629, "category": "bottom50"}, {"Country": "italy", "Year": "2003", "percent": 0.0667, "category": "bottom50"}, {"Country": "italy", "Year": "2004", "percent": 0.0703, "category": "bottom50"}, {"Country": "italy", "Year": "2005", "percent": 0.0642, "category": "bottom50"}, {"Country": "italy", "Year": "2006", "percent": 0.0575, "category": "bottom50"}, {"Country": "italy", "Year": "2007", "percent": 0.0514, "category": "bottom50"}, {"Country": "italy", "Year": "2008", "percent": 0.0451, "category": "bottom50"}, {"Country": "italy", "Year": "2009", "percent": 0.0377, "category": "bottom50"}, {"Country": "italy", "Year": "2010", "percent": 0.0296, "category": "bottom50"}, {"Country": "italy", "Year": "2011", "percent": 0.0233, "category": "bottom50"}, {"Country": "italy", "Year": "2012", "percent": 0.0164, "category": "bottom50"}, {"Country": "italy", "Year": "2013", "percent": 0.021, "category": "bottom50"}, {"Country": "italy", "Year": "2014", "percent": 0.0247, "category": "bottom50"}, {"Country": "italy", "Year": "2015", "percent": 0.0256, "category": "bottom50"}, {"Country": "italy", "Year": "2016", "percent": 0.0254, "category": "bottom50"}, {"Country": "italy", "Year": "2017", "percent": 0.0253, "category": "bottom50"}, {"Country": "italy", "Year": "2018", "percent": 0.0253, "category": "bottom50"}, {"Country": "italy", "Year": "2019", "percent": 0.0253, "category": "bottom50"}, {"Country": "italy", "Year": "2020", "percent": 0.0253, "category": "bottom50"}, {"Country": "italy", "Year": "2021", "percent": 0.0253, "category": "bottom50"}]},
+    
+    
+    "height":300,
+    "width":450,
+    
+    "mark": {
+      "type": "line"
+    },
+  
+    "encoding": {
+      "x": { 
+        "field": "Year",
+        "type":"temporal",
+        "axis":{"title":"Year",
+            "labelAngle": 45,
+            "ticks": false}
+        },
+  
+      "y": { 
+        "field": "percent",
+        "type": "quantitative",
+        "axis":{"format":"%", "title":"Share of Total Income"}
+        },
+  
+      "color": {
+        "field": "category", 
+        "type": "nominal",
+        "scale":{"range":["rgb(20,204,189)", "rgb(232,23,33)"]},
+        "legend": {
+          "labelExpr": "{'top1':'Top 1% of Earners', 'bottom50': 'Bottom 50% of Earners'}[datum.label]", 
+          "title":"Legend"}
+      
+      }
+      
+  
+      }
+    }
