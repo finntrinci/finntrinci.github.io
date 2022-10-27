@@ -83,7 +83,7 @@
 <!-- Third Week graph is in this container -->
         <hr>
         <h2>Week 3</h2>
-        <p>This week we looked at moving a dataset from a .csv file into our .json files using python in Google CoLab
+        <p>This week we looked at moving a dataset from a .csv file into our .json files using python in Google CoLab. My <a href="https://colab.research.google.com/drive/1VB9VERAx9W2GCcW2oGYdSy_JPC-NXfXH?usp=sharing" target="_blank">data pipeline</a> <br> cleaned some data from the <a href="https://wid.world/" target="_blank">World Inequality Database</a> and added a new variable to colour the bars in the same way as the line chart.
         </p>
         <hr>
 
@@ -91,10 +91,18 @@
 
             <div id="text">
                 <h3>Income Shares in Italy</h3>
-                <p> This chart looks at the disparity in total income between the top 1% of earners and bottom 50% of earners in Italy</p>
+                <p> This chart looks at the disparity in total income <br> between the top 1% of earners and bottom 50% of earners in Italy</p>
             
         
-            <div class="chart" id="ItalyGini"></div>
+                <div class="chart" id="ItalyGini"></div>
+            </div>
+
+            <div id="text">
+                <h3>Interactive Version - Income Shares</h3>
+                <p> This graph is an alternative visualisation, showing the change <br>in income shares explicitly through the use of a slider</p>
+
+                <div class="chart" id="ItalyGiniSlide"></div>
+            
             </div>
             <hr>
         </container>
@@ -117,6 +125,7 @@
     var IMFChart1 = "IMF_lending.json"
     var IMFChart2 = "IMF_lending_fixed.json"
     var ItalyGini = 'italy_gini.json'
+    var ItalyGiniSlide = 'italy_gini_slider.json'
     // these link the MyChart var to the .json chart files
 
     // Embed charts:
@@ -125,6 +134,7 @@
     vegaEmbed('#IMFChart1', IMFChart1);
     vegaEmbed('#IMFChart2', IMFChart2);
     vegaEmbed('#ItalyGini', ItalyGini);
+    vegaEmbed('#ItalyGiniSlide', ItalyGiniSlide);
 </script>
 
 </html>
