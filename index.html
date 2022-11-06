@@ -131,11 +131,43 @@
             <div class="chart" id="CO2Emissions"></div>
         
         </div>
-        <hr>
     </container>
-    </div> 
 
+    <!-- Fifth Week graph is in this container -->
+    <hr>
+    <h2>Week 5</h2>
+    <p>This week we worked with loops in python to quickly create a dashboard of graphs. We used the <a href="https://developer.ons.gov.uk/" target="_blank">ONS API</a> to generate a set <br>
+        of API links to download data from. My <a href="https://colab.research.google.com/drive/1MS3h9v2SFRfU3f8S3S30XDBXQeUO7OzG?usp=sharing" target="_blank">Google Colab</a> shows the code used. In this case, since all the data was from <br>
+        the same dataset, I just needed to change the series ID each time. The data is hosted on my Github page.
+    </p>
+    <hr>
 
+    <container class="container">
+        <container class="container2">
+            
+            <div class="chart" id="Unemp_A_16"></div>
+            <div class="chart" id="Unemp_F_16"></div>
+            <div class="chart" id="Unemp_M_16"></div>
+
+        </container> 
+
+        <container class="container2">
+            
+            <div class="chart" id="Unemp_12mth_A"></div>
+            <div class="chart" id="Unemp_12mth_F"></div>
+            <div class="chart" id="Unemp_12mth_M"></div>
+
+        </container> 
+
+        <container class="container2">
+            
+            <div class="chart" id="Unemp_lon_A"></div>
+            <div class="chart" id="Unemp_lon_F"></div>
+            <div class="chart" id="Unemp_lon_M"></div>
+
+        </container> 
+    </container>
+    <hr>
 
 </div> 
 
@@ -155,6 +187,15 @@
     var ItalyGiniSlide = 'italy_gini_slider.json'
     var ClimateFund = 'climate_fund_pledge.json'
     var CO2Emissions = 'per_cap_co2.json'
+    var Unemp_A_16 = 'Unemp_A_16.json'
+    var Unemp_F_16 = 'Unemp_F_16.json'
+    var Unemp_M_16 = 'Unemp_M_16.json'
+    var Unemp_12mth_A = 'Unemp_12mth_A.json'
+    var Unemp_12mth_F = 'Unemp_12mth_F.json'
+    var Unemp_12mth_M = 'Unemp_12mth_M.json'
+    var Unemp_lon_A = 'Unemp_lon_A.json'
+    var Unemp_lon_F = 'Unemp_lon_F.json'
+    var Unemp_lon_M = 'Unemp_lon_M.json'
     // these link the MyChart var to the .json chart files
 
     // Embed charts:
@@ -166,6 +207,15 @@
     vegaEmbed('#ItalyGiniSlide', ItalyGiniSlide);
     vegaEmbed('#ClimateFund', ClimateFund);
     vegaEmbed('#CO2Emissions', CO2Emissions);
+    vegaEmbed('#Unemp_A_16', Unemp_A_16);
+    vegaEmbed('#Unemp_F_16', Unemp_F_16);
+    vegaEmbed('#Unemp_M_16', Unemp_M_16);
+    vegaEmbed('#Unemp_12mth_A', Unemp_12mth_A);
+    vegaEmbed('#Unemp_12mth_F', Unemp_12mth_F);
+    vegaEmbed('#Unemp_12mth_M', Unemp_12mth_M);
+    vegaEmbed('#Unemp_lon_A', Unemp_lon_A);
+    vegaEmbed('#Unemp_lon_F', Unemp_lon_F);
+    vegaEmbed('#Unemp_lon_M', Unemp_lon_M);
 </script>
 
 </html>
