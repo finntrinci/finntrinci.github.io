@@ -104,8 +104,35 @@
                 <div class="chart" id="ItalyGiniSlide"></div>
             
             </div>
-            <hr>
         </container>
+    <!-- Fourth Week graph is in this container -->
+    <hr>
+    <h2>Week 4</h2>
+    <p>This week we were introduced to data scraping. This <a href="https://colab.research.google.com/drive/1iDiQsrd5qvnbZraOOliIO4DhfdhWLvuH?usp=sharing" target="_blank">Google Colab</a> notebook shows how I scaped the data from a table on Wikipedia and <br>
+        then cleaned the data into a TIDY format. From this format I exported the data as .json and used this directly in vega-lite to create the graphs. <br>
+        The data was scraped from <a href="https://en.wikipedia.org/wiki/Green_Climate_Fund" target="_blank">here</a>, which gets its data from the <a href="https://www.greenclimate.fund/about/resource-mobilisation" target="_blank">Green Climate Fund website</a>.
+    </p>
+    <hr>
+
+    <container class="container">
+
+        <div id="text">
+            <h3>Green Climate Fund Contributions</h3>
+            <p> This chart shows the per capita contributions by country to the Green Climate Fund.</p>
+        
+    
+            <div class="chart" id="ClimateFund"></div>
+        </div>
+
+        <div id="text">
+            <h3>CO2 Emissions Per Capita</h3>
+            <p>This chart shows the per capita CO2 emissions by country in 2020.</p>
+
+            <div class="chart" id="CO2Emissions"></div>
+        
+        </div>
+        <hr>
+    </container>
     </div> 
 
 
@@ -126,6 +153,8 @@
     var IMFChart2 = "IMF_lending_fixed.json"
     var ItalyGini = 'italy_gini.json'
     var ItalyGiniSlide = 'italy_gini_slider.json'
+    var ClimateFund = 'climate_fund_pledge.json'
+    var CO2Emissions = 'per_cap_co2.json'
     // these link the MyChart var to the .json chart files
 
     // Embed charts:
@@ -135,6 +164,8 @@
     vegaEmbed('#IMFChart2', IMFChart2);
     vegaEmbed('#ItalyGini', ItalyGini);
     vegaEmbed('#ItalyGiniSlide', ItalyGiniSlide);
+    vegaEmbed('#ClimateFund', ClimateFund);
+    vegaEmbed('#CO2Emissions', CO2Emissions);
 </script>
 
 </html>

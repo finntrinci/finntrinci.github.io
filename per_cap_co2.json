@@ -1,0 +1,34 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+   
+    "title": {
+        "text": "CO2 Emissions per Capita (tonnes)",
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"},
+   
+   
+    "data": { "values":
+    
+    [{"Country": "USA", "Emissions per capita (tonnes of CO2e)": 17.0, "Signed per Capita ($)": 9.41, "Signed ($, Millions)": "3000", "GDP per capita ($)": "55000"}, {"Country": "Japan", "Emissions per capita (tonnes of CO2e)": 9.0, "Signed per Capita ($)": 11.8, "Signed ($, Millions)": "1500", "GDP per capita ($)": "36000"}, {"Country": "UK", "Emissions per capita (tonnes of CO2e)": 7.0, "Signed per Capita ($)": 18.77, "Signed ($, Millions)": "1211", "GDP per capita ($)": "46000"}, {"Country": "France", "Emissions per capita (tonnes of CO2e)": 5.0, "Signed per Capita ($)": 15.64, "Signed ($, Millions)": "1035", "GDP per capita ($)": "43000"}, {"Country": "Germany", "Emissions per capita (tonnes of CO2e)": 9.0, "Signed per Capita ($)": 12.4, "Signed ($, Millions)": "1003", "GDP per capita ($)": "48000"}, {"Country": "Sweden", "Emissions per capita (tonnes of CO2e)": 6.0, "Signed per Capita ($)": 59.31, "Signed ($, Millions)": "581", "GDP per capita ($)": "59000"}, {"Country": "Canada", "Emissions per capita (tonnes of CO2e)": 14.0, "Signed per Capita ($)": 7.79, "Signed ($, Millions)": "277", "GDP per capita ($)": "50000"}, {"Country": "Italy", "Emissions per capita (tonnes of CO2e)": 7.0, "Signed per Capita ($)": 4.54, "Signed ($, Millions)": "268", "GDP per capita ($)": "35000"}, {"Country": "Norway", "Emissions per capita (tonnes of CO2e)": 9.0, "Signed per Capita ($)": 50.2, "Signed ($, Millions)": "258", "GDP per capita ($)": "97000"}, {"Country": "Australia", "Emissions per capita (tonnes of CO2e)": 17.0, "Signed per Capita ($)": 7.92, "Signed ($, Millions)": "187", "GDP per capita ($)": "62000"}, {"Country": "Spain", "Emissions per capita (tonnes of CO2e)": 6.0, "Signed per Capita ($)": 3.46, "Signed ($, Millions)": "161", "GDP per capita ($)": "30000"}, {"Country": "Netherlands", "Emissions per capita (tonnes of CO2e)": 10.0, "Signed per Capita ($)": 7.94, "Signed ($, Millions)": "134", "GDP per capita ($)": "52000"}, {"Country": "Switzerland", "Emissions per capita (tonnes of CO2e)": 5.0, "Signed per Capita ($)": 12.21, "Signed ($, Millions)": "100", "GDP per capita ($)": "85000"}, {"Country": "South Korea", "Emissions per capita (tonnes of CO2e)": 12.0, "Signed per Capita ($)": 1.99, "Signed ($, Millions)": "100", "GDP per capita ($)": "28000"}, {"Country": "Denmark", "Emissions per capita (tonnes of CO2e)": 7.0, "Signed per Capita ($)": 12.73, "Signed ($, Millions)": "71.8", "GDP per capita ($)": "61000"}, {"Country": "Belgium", "Emissions per capita (tonnes of CO2e)": 9.0, "Signed per Capita ($)": 6.18, "Signed ($, Millions)": "66.9", "GDP per capita ($)": "48000"}, {"Country": "Finland", "Emissions per capita (tonnes of CO2e)": 10.0, "Signed per Capita ($)": 8.49, "Signed ($, Millions)": "46.4", "GDP per capita ($)": "50000"}, {"Country": "Austria", "Emissions per capita (tonnes of CO2e)": 8.0, "Signed per Capita ($)": 4.09, "Signed ($, Millions)": "34.8", "GDP per capita ($)": "51000"}, {"Country": "Luxembourg", "Emissions per capita (tonnes of CO2e)": 21.0, "Signed per Capita ($)": 58.63, "Signed ($, Millions)": "33.4", "GDP per capita ($)": "111000"}, {"Country": "Mexico", "Emissions per capita (tonnes of CO2e)": 4.0, "Signed per Capita ($)": 0.08, "Signed ($, Millions)": "10.0", "GDP per capita ($)": "10000"}, {"Country": "Czech Republic", "Emissions per capita (tonnes of CO2e)": 10.0, "Signed per Capita ($)": 0.57, "Signed ($, Millions)": "5.32", "GDP per capita ($)": "20000"}, {"Country": "Hungary", "Emissions per capita (tonnes of CO2e)": 5.0, "Signed per Capita ($)": 0.43, "Signed ($, Millions)": "4.30", "GDP per capita ($)": "14000"}, {"Country": "New Zealand", "Emissions per capita (tonnes of CO2e)": 7.0, "Signed per Capita ($)": 0.57, "Signed ($, Millions)": "2.56", "GDP per capita ($)": "42000"}, {"Country": "Estonia", "Emissions per capita (tonnes of CO2e)": 14.0, "Signed per Capita ($)": 0.99, "Signed ($, Millions)": "1.30", "GDP per capita ($)": "20000"}, {"Country": "Panama", "Emissions per capita (tonnes of CO2e)": 3.0, "Signed per Capita ($)": 0.25, "Signed ($, Millions)": "1.00", "GDP per capita ($)": "12000"}, {"Country": "Iceland", "Emissions per capita (tonnes of CO2e)": 6.0, "Signed per Capita ($)": 1.55, "Signed ($, Millions)": "0.50", "GDP per capita ($)": "52000"}, {"Country": "Latvia", "Emissions per capita (tonnes of CO2e)": 4.0, "Signed per Capita ($)": 0.24, "Signed ($, Millions)": "0.47", "GDP per capita ($)": "16000"}, {"Country": "Chile", "Emissions per capita (tonnes of CO2e)": 5.0, "Signed per Capita ($)": 0.02, "Signed ($, Millions)": "0.30", "GDP per capita ($)": "15000"}, {"Country": "Colombia", "Emissions per capita (tonnes of CO2e)": 2.0, "Signed per Capita ($)": 0.01, "Signed ($, Millions)": "0.30", "GDP per capita ($)": "8000"}, {"Country": "Indonesia", "Emissions per capita (tonnes of CO2e)": 2.0, "Signed per Capita ($)": 0.01, "Signed ($, Millions)": "0.25", "GDP per capita ($)": "4000"}, {"Country": "Malta", "Emissions per capita (tonnes of CO2e)": 6.0, "Signed per Capita ($)": 0.47, "Signed ($, Millions)": "0.20", "GDP per capita ($)": "23000"}, {"Country": "Poland", "Emissions per capita (tonnes of CO2e)": 8.0, "Signed per Capita ($)": 0.01, "Signed ($, Millions)": "0.11", "GDP per capita ($)": "14000"}, {"Country": "Lithuania", "Emissions per capita (tonnes of CO2e)": 5.0, "Signed per Capita ($)": 0.04, "Signed ($, Millions)": "0.10", "GDP per capita ($)": "16000"}, {"Country": "Bulgaria", "Emissions per capita (tonnes of CO2e)": 7.0, "Signed per Capita ($)": 0.02, "Signed ($, Millions)": "0.10", "GDP per capita ($)": "8000"}, {"Country": "Romania", "Emissions per capita (tonnes of CO2e)": 4.0, "Signed per Capita ($)": 0.01, "Signed ($, Millions)": "0.10", "GDP per capita ($)": "10000"}, {"Country": "Liechtenstein", "Emissions per capita (tonnes of CO2e)": 1.0, "Signed per Capita ($)": 1.48, "Signed ($, Millions)": " 0.1", "GDP per capita ($)": "135000"}]
+  
+  
+      },
+      "height":150,
+      "width":600,
+  
+    "mark": {
+      "type": "bar",
+      "color":"#792F44"},
+    "encoding": {
+      "x": {
+        "field": "Country"},
+      "y": {
+        "field": "Emissions per capita (tonnes of CO2e)", 
+        "type": "quantitative", 
+        "axis":{"title":"tonnes of CO2 per capita (2020)"}}
+      
+  
+    }
+  }
