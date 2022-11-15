@@ -1,0 +1,136 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins&display=swap');
+
+
+body {
+    font-family: 'Montserrat', sans-serif;  
+    margin: 0px;
+  }
+  
+  nav {
+    background: rgb(214,151,251);
+    background: radial-gradient(circle, #e39af2 26%, #da7ded 80%);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: #58629e;
+    color: #0f2852;
+  }
+  
+  nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0px 20px;
+    font-size: 1.3em;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  nav a.active{
+    color: #2b377c;
+    text-decoration: overline underline;
+  }
+  
+  section {
+    min-height: 100vh;
+  }
+
+  
+  section#header {
+    background: rgb(214,151,251);
+    background: radial-gradient(circle, #e7a8f4 26%, #da7ded 80%);
+    color: white;
+    min-height: 30vh;
+    font-family: 'Monoton', sans-serif;
+  }
+  
+  section#project {
+    background: #e7a8f4;
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: #58629e;
+    color: #0f2852;
+  }
+  
+  section#dashboard {
+    background: #e7a8f4;
+    color: #084012;
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: rgba(0, 47, 167,1);
+  }
+  
+  article {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 0px auto;
+  }
+  
+  h2 {
+    text-align: center;
+    padding: 40px 0px 0px 0px;
+    font-size: 3em;
+  }
+  
+  p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+
+.chart{
+    background-color: #ffffff;
+
+    display:inline-block;
+    justify-content: center;
+    
+    border-radius: 0px;
+    
+    padding: 3px;
+    margin: 3px;
+    z-index: 0;
+
+}
+
+.container {
+    display: block;
+    margin: auto;
+    flex-flow: wrap;
+   
+    padding: 20px;
+  
+    background-color: rgba(0,0,0,0);
+    border-radius: 0px;
+    
+    max-width: 900px; 
+  }
+
+  
+  @media
+  (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 11px;
+    }
+  }

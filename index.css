@@ -1,32 +1,134 @@
-/* Richard Davies, Data Science for Economists */
-
-/* This is my first proper css file */
 
 
-/* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins&display=swap');
 
+/**************** DESIGN FOR ALL MY TEXT *****************/
+body {
+    font-family: 'Montserrat', sans-serif;  
+    margin: 0px;
+  }
 
-/* Set the background color for my page: */
-body{
-    background-color: rgb(75, 75, 75);
- 
+  /* my top navigation bar */
+  nav {
+    background: rgb(214,151,251);
+    background: radial-gradient(circle, #e39af2 26%, #da7ded 80%);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    /* sticky so that when scrolling the nav bar stays at the top of the screen. */
+    position: sticky;
+    top: 0px;
+    /* z-index of 1 so that the bar stays above my chart elements */
+    z-index: 1;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: rgba(0, 47, 167,1);
+    color: #0f2852;
+  }
+  
+  nav a {
+    color: black;
+    text-decoration: none;
+    margin: 0px 20px;
+    font-size: 1.3em;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  nav a.active{
+    color: #2b377c;
+    text-decoration: overline underline;
+  }
+  
+  section {
+    min-height: 100vh;
+  }
+
+  
+  section#header {
+    background: rgb(214,151,251);
+    background: radial-gradient(circle, #e7a8f4 26%, #da7ded 80%);
+    color: white;
+    min-height: 30vh;
+    font-family: 'Monoton', sans-serif;
+  }
+  
+  section#Week {
+
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: rgba(0, 47, 167,1);
+    color: #0f2852;
+    /* background is the gradient variable, and the animation gradually takes place over 10s, alternate means it goes in reverse */
+    background: var(--gradient);
+    background-size: 300%;
+    animation: bg_animation 10s infinite alternate;
+
+  }
+
+/* defining the variable gradient for my animated background */
+:root {
+    --gradient: linear-gradient(
+        70deg,
+        #da7ded 5%,
+        #ebb0f7 60%,
+        #f5d0fc 100%
+        );
+}
+/* defining the animation for my background */
+@keyframes bg_animation {
+    0% {background-position: left;}
+    100% {background-position: right;}
 }
 
 
-/* Choose the appearance of the tags, h1, h3: */
-h1, h2{
+
+
+  
+  section#dashboard {
+    background: #e7a8f4;
+    color: #084012;
+    border-top-style: solid;
+    border-top-width: 5px;
+    border-top-color: rgba(0, 47, 167,1);
+  }
+  
+  article {
+    width: 90%;
+    max-width: 1000px;
+    padding: 5px;
+    margin: 0px auto;
+  }
+
+  
+  h1{
     color:rgb(10, 10, 10);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
 }
+  h2 {
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    font-size: 3em;
+    color: rgba(0, 47, 167,1);
+  }
+
+    section#header {
+    background: rgb(214,151,251);
+    background: radial-gradient(circle, #e7a8f4 26%, #da7ded 80%);
+    color: white;
+    min-height: 30vh;
+    font-family: 'Monoton', sans-serif;
+  }
 
 /* Choose the appearance of the tags h3: */
 h3{
-    color:rgb(75, 75, 75);
+    color:rgba(0, 47, 167,1);
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     text-align: center;
@@ -38,7 +140,7 @@ p{
     color:rgb(10, 10, 10);
     font-family: 'Poppins', sans-serif;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -48,89 +150,63 @@ p{
     border-width:2px; */
 }
 
-/* hr is just a horizontal line breaking the page up*/
-hr{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: transparent;
-    color: black;
-    width: 70%;
-    border-top: 3px solid ;
-    border-color: rgb(208, 157, 216);
-    border-radius: 40px;
-    animation: pulse 3s infinite;
-    
+p a{
+    color: rgba(0, 47, 167,1);
+    text-decoration: none;
+
 }
 
-/* defines the pulse animation keyframes for hr */
-@keyframes pulse {
-	0% {
-		transform: scale(1);
-		box-shadow: 0 0 0 0 rgb(208, 157, 216);
-	}
-
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-	}
-
-    100% {
-        transform: scale(1)
-        box-shadow 0 0 0 0 transparent;
-    }
-}
-
-/* dot is how we assign things to a class, in this case class is myWeek1 */
-.myWeek1{
-    margin: auto;
-    max-width: screen;
-    background-color: rgb(240, 227, 245);
-
-    border-width: 15px;
-    border-style: none;
-    border-radius: 2px;
-    border-color: rgb(208, 157, 216)
-    
+p a:hover{
+    text-decoration: underline;
 }
 
 
-/* Set the apperance of the class, chart .chart applies to all the divs that charts are in*/
+/* Charts go Within, background white to stay consistent and accent border */
 .chart{
-    background-color: rgb(255, 255, 255);
-    width:auto;
-    border-width: 12px;
-    border-style: double;
-    border-radius: 2px;
-    border-color: rgb(208, 157, 216);
-    margin: auto;
-    position: static;
+    background-color: #ffffff;
+
+    display:inline-block;
+    justify-content: center;
+    
+    border-radius: 0px;
+    border-color: rgba(0, 47, 167,1);
+    border-width: 3px;
+    border-style: solid;
+    
+    padding: 3px;
+    margin: 3px;
+    z-index: 0;
 
 }
-  
-/* a way to center the text and graphs on the page (each being within this container)*/
+
+
+.container1 {
+    display: flex;
+    flex-flow: wrap;
+    column-gap: 20px;
+    margin-top: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    justify-content: center;
+    align-content: center;
+  }
+
+
 .container {
     display: flex;
+    margin: auto;
     flex-flow: wrap;
-    column-gap: 20px;
-    margin-top: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+   
+    padding: 20px;
+    
+    max-width: 1000px; 
     justify-content: center;
     align-content: center;
+
   }
 
-.container2 {
-    display: flex;
-    flex-flow: wrap;
-    max-width: 70%;
-    column-gap: 20px;
-    margin-top: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    justify-content: center;
-    align-content: center;
-  }
-/* can also change properties of a specific chart, this chart was displaying left-of-center so I added some padding*/
+
+
 #ItalyGini{
     padding-bottom:35px;
     padding-right:0px;
@@ -160,3 +236,23 @@ hr{
     overflow-y: hidden;
     box-sizing: border-box;
   }
+  
+  @media
+  (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 11px;
+    }
+  }
+
