@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+    "title": {
+      "text": "Map of Italy",
+      "subtitle": ["Regione names in tooltip", ""],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "middle",
+      "color": "black"
+    },
+    "config": {"background": "white", "view": {"stroke": "trasparent"}},
+    "width": 300,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/Maps/italy-with-regions_1458.geojson",
+      "format": {"property": "features"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "key": "Regione",
+          "fields": ["Regione", "NumeroComuni"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/Maps/italy_region_names.json"
+          }
+        }
+      },
+      {
+        "calculate": "toNumber(replace(replace(datum.NumeroComuni,'.',''),'.',''))",
+        "as": "comuni"
+      }
+  
+  
+    ],
+    "projection": {"type": "mercator"},
+    "mark": {
+      "type": "geoshape",
+      "fill": "#807dba",
+      "stroke": "rgb(250, 250, 250)",
+      "strokeWidth": 0.5
+    },
+    "encoding": {
+  
+      "tooltip": 
+      [{"field": "Regione"}]
+  
+    }
+  }

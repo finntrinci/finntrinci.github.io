@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "title":{"text":"Price Increase of Low Cost Items",
+    "subtitle":"comparing the price index of a basket of low cost goods vs. the CPIH index. Source: ONS",
+    "anchor": "start",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10},
+    "data": {"url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/ONS_price_compare.json",
+    "format":{"type": "json"}},
+  
+    "height":300,
+    "width":300,
+  
+    "mark": {"type":"line",
+    "strokeWidth":3},
+
+
+    "encoding": {
+      "x": {
+        "field": "Date", 
+        "type": "temporal",
+  
+        "axis":{"format":"%b/%Y", "tickCount":"month"}
+        },
+  
+      "y": {
+        "field": "Value", 
+        "type": "quantitative",
+        "title":"Price Index",
+        "scale":{
+          "domain":[90, 120]}
+        },
+  
+      "color": {
+        "field": "Type",
+        "type": "nominal",
+        "scale":{
+          "range":["#807dba", "#7dba94"]
+        }
+        },
+  
+      "tooltip":[
+        {"field":"Value", "title":"Price Index"},
+        {"field":"Type"}
+      ]
+    }
+  }

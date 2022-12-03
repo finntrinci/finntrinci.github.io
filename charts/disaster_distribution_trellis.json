@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A trellis bar chart showing the distribution of the frequencies of different disaster types globally since 1990.",
+
+  "data": { 
+    "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/disaster_country_type.json", 
+    "format":{
+      "type": "json"}},
+  "height":150,
+  "width":150,
+
+
+  "mark": "bar",
+  "encoding": {
+    "facet": {
+      "field":"Type",
+      "type": "ordinal",
+      "columns": 3
+    },
+    "x":{
+      "bin": {"maxbins":60},
+      "field":"Count"},
+
+    "y":{
+      "aggregate":"count",
+      "title":"Quantity of Disasters"
+    },
+
+    "color":{"field":"Count",
+    "legend":null,
+    "scale":{"range":["#7dba94"]}},
+
+    "tooltip":[
+      {"field":"Count", "title":"Disaster Quantity"},
+      {"field":"__count", "title":"No. of Countries"}
+    ]
+  }
+
+  
+}

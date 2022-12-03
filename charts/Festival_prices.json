@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{"text":"Price Changes between Sep 2021 and Sep 2022",
+    "anchor": "start",
+    "subtitle":["Prices as average, scraped from supermarket websites. Source: ONS"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10},
+  
+    "height": 300,
+    "width":600,
+  
+    "data": { "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/ONS_price_change.json",
+    "format":{"type": "json"}},
+  
+  
+    "mark": {
+      "type":"bar",
+      "color":"#807dba"},
+  
+    "encoding": {
+      "y": {"field": "Percentage change",
+        "type": "quantitative",
+        "title":"Percentage Change in Price"
+        },
+  
+      "x": {
+        "field":"Item", 
+        "type": "nominal",
+        "sort":"-y",
+        "axis":{
+          "labelAngle":45}
+        
+      },
+  
+      "tooltip":[
+        {"field":"Percentage change",
+        "title":"Percentage Change in Price"},
+        {"field":"Item"}
+        ]
+    }
+  }
