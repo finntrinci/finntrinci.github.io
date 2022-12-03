@@ -12,7 +12,7 @@ body {
   /* my top navigation bar */
   nav {
     background: rgb(214,151,251);
-    background: radial-gradient(circle, #e39af2 26%, #da7ded 80%);
+    background: radial-gradient(circle, #bbaeff 40%, #b6e6ff 80%);
     padding: 10px;
     text-align: center;
     width: 100%;
@@ -50,7 +50,7 @@ body {
   
   section#header {
     background: rgb(214,151,251);
-    background: radial-gradient(circle, #e7a8f4 26%, #da7ded 80%);
+    background: radial-gradient(circle, #bbaeff 40%, #b6e6ff 80%);
     color: white;
     min-height: 30vh;
     font-family: 'Monoton', sans-serif;
@@ -73,8 +73,8 @@ body {
 :root {
     --gradient: linear-gradient(
         70deg,
-        #da7ded 5%,
-        #ebb0f7 60%,
+        #bbaeff 15%,
+        #b6e6ff 60%,
         #f5d0fc 100%
         );
 }
@@ -118,13 +118,6 @@ body {
     color: rgba(0, 47, 167,1);
   }
 
-    section#header {
-    background: rgb(214,151,251);
-    background: radial-gradient(circle, #e7a8f4 26%, #da7ded 80%);
-    color: white;
-    min-height: 30vh;
-    font-family: 'Monoton', sans-serif;
-  }
 
 /* Choose the appearance of the tags h3: */
 h3{
