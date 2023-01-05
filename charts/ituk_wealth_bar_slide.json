@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+      "text": "Wealth Inequality in Italy and the UK",
+      "subtitle": "Wealth Shares of Top 1% of Earners and Bottom 50% of Earners. Data Scource: WID",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+  
+  
+  "data": {
+    "values": [{"Country": "Italy", "Year": "1995", "Bottom 50% Share": 0.1022, "Top 1% Share": 0.1637}, {"Country": "Italy", "Year": "1996", "Bottom 50% Share": 0.0994, "Top 1% Share": 0.1657}, {"Country": "Italy", "Year": "1997", "Bottom 50% Share": 0.0967, "Top 1% Share": 0.1677}, {"Country": "Italy", "Year": "1998", "Bottom 50% Share": 0.0939, "Top 1% Share": 0.1708}, {"Country": "Italy", "Year": "1999", "Bottom 50% Share": 0.0903, "Top 1% Share": 0.1763}, {"Country": "Italy", "Year": "2000", "Bottom 50% Share": 0.0862, "Top 1% Share": 0.1854}, {"Country": "Italy", "Year": "2001", "Bottom 50% Share": 0.0748, "Top 1% Share": 0.201}, {"Country": "Italy", "Year": "2002", "Bottom 50% Share": 0.0629, "Top 1% Share": 0.2134}, {"Country": "Italy", "Year": "2003", "Bottom 50% Share": 0.0667, "Top 1% Share": 0.2089}, {"Country": "Italy", "Year": "2004", "Bottom 50% Share": 0.0703, "Top 1% Share": 0.2069}, {"Country": "Italy", "Year": "2005", "Bottom 50% Share": 0.0642, "Top 1% Share": 0.2123}, {"Country": "Italy", "Year": "2006", "Bottom 50% Share": 0.0575, "Top 1% Share": 0.2183}, {"Country": "Italy", "Year": "2007", "Bottom 50% Share": 0.0514, "Top 1% Share": 0.2109}, {"Country": "Italy", "Year": "2008", "Bottom 50% Share": 0.0451, "Top 1% Share": 0.2061}, {"Country": "Italy", "Year": "2009", "Bottom 50% Share": 0.0377, "Top 1% Share": 0.2076}, {"Country": "Italy", "Year": "2010", "Bottom 50% Share": 0.0296, "Top 1% Share": 0.2197}, {"Country": "Italy", "Year": "2011", "Bottom 50% Share": 0.0233, "Top 1% Share": 0.2212}, {"Country": "Italy", "Year": "2012", "Bottom 50% Share": 0.0164, "Top 1% Share": 0.2355}, {"Country": "Italy", "Year": "2013", "Bottom 50% Share": 0.021, "Top 1% Share": 0.234}, {"Country": "Italy", "Year": "2014", "Bottom 50% Share": 0.0247, "Top 1% Share": 0.2551}, {"Country": "Italy", "Year": "2015", "Bottom 50% Share": 0.0256, "Top 1% Share": 0.2247}, {"Country": "Italy", "Year": "2016", "Bottom 50% Share": 0.0254, "Top 1% Share": 0.22}, {"Country": "Italy", "Year": "2017", "Bottom 50% Share": 0.0253, "Top 1% Share": 0.2211}, {"Country": "Italy", "Year": "2018", "Bottom 50% Share": 0.0253, "Top 1% Share": 0.221}, {"Country": "Italy", "Year": "2019", "Bottom 50% Share": 0.0253, "Top 1% Share": 0.2209}, {"Country": "Italy", "Year": "2020", "Bottom 50% Share": 0.0253, "Top 1% Share": 0.2209}, {"Country": "Italy", "Year": "2021", "Bottom 50% Share": 0.0253, "Top 1% Share": 0.2209}, {"Country": "United Kingdom", "Year": "1995", "Bottom 50% Share": 0.0626, "Top 1% Share": 0.1846}, {"Country": "United Kingdom", "Year": "1996", "Bottom 50% Share": 0.0506, "Top 1% Share": 0.1888}, {"Country": "United Kingdom", "Year": "1997", "Bottom 50% Share": 0.0428, "Top 1% Share": 0.2072}, {"Country": "United Kingdom", "Year": "1998", "Bottom 50% Share": 0.0444, "Top 1% Share": 0.2119}, {"Country": "United Kingdom", "Year": "1999", "Bottom 50% Share": 0.0512, "Top 1% Share": 0.2042}, {"Country": "United Kingdom", "Year": "2000", "Bottom 50% Share": 0.0498, "Top 1% Share": 0.2034}, {"Country": "United Kingdom", "Year": "2001", "Bottom 50% Share": 0.0515, "Top 1% Share": 0.2041}, {"Country": "United Kingdom", "Year": "2002", "Bottom 50% Share": 0.0502, "Top 1% Share": 0.1997}, {"Country": "United Kingdom", "Year": "2003", "Bottom 50% Share": 0.0532, "Top 1% Share": 0.1875}, {"Country": "United Kingdom", "Year": "2004", "Bottom 50% Share": 0.0573, "Top 1% Share": 0.1936}, {"Country": "United Kingdom", "Year": "2005", "Bottom 50% Share": 0.0571, "Top 1% Share": 0.2022}, {"Country": "United Kingdom", "Year": "2006", "Bottom 50% Share": 0.056, "Top 1% Share": 0.2058}, {"Country": "United Kingdom", "Year": "2007", "Bottom 50% Share": 0.0601, "Top 1% Share": 0.2066}, {"Country": "United Kingdom", "Year": "2008", "Bottom 50% Share": 0.0631, "Top 1% Share": 0.202}, {"Country": "United Kingdom", "Year": "2009", "Bottom 50% Share": 0.0482, "Top 1% Share": 0.2001}, {"Country": "United Kingdom", "Year": "2010", "Bottom 50% Share": 0.0495, "Top 1% Share": 0.1998}, {"Country": "United Kingdom", "Year": "2011", "Bottom 50% Share": 0.0422, "Top 1% Share": 0.2018}, {"Country": "United Kingdom", "Year": "2012", "Bottom 50% Share": 0.0447, "Top 1% Share": 0.2071}, {"Country": "United Kingdom", "Year": "2013", "Bottom 50% Share": 0.0427, "Top 1% Share": 0.2258}, {"Country": "United Kingdom", "Year": "2014", "Bottom 50% Share": 0.0392, "Top 1% Share": 0.2261}, {"Country": "United Kingdom", "Year": "2015", "Bottom 50% Share": 0.0453, "Top 1% Share": 0.2148}, {"Country": "United Kingdom", "Year": "2016", "Bottom 50% Share": 0.0439, "Top 1% Share": 0.2125}, {"Country": "United Kingdom", "Year": "2017", "Bottom 50% Share": 0.0428, "Top 1% Share": 0.2114}, {"Country": "United Kingdom", "Year": "2018", "Bottom 50% Share": 0.0465, "Top 1% Share": 0.2124}, {"Country": "United Kingdom", "Year": "2019", "Bottom 50% Share": 0.0465, "Top 1% Share": 0.2111}, {"Country": "United Kingdom", "Year": "2020", "Bottom 50% Share": 0.0466, "Top 1% Share": 0.21}, {"Country": "United Kingdom", "Year": "2021", "Bottom 50% Share": 0.0464, "Top 1% Share": 0.213}]
+  },
+
+      "transform": [
+      {"filter": "toNumber(datum.Year) == minYear"}
+    ],
+
+    "height":300,
+    "width":300,
+
+        "params": [    
+      {"name":"minYear", "value":1995,
+         "bind":{
+           "input": "range",
+           "min": 1995, 
+           "max": 2021, 
+           "step": 1,
+           "name": "Year:"}
+      }
+    ],
+
+  "repeat": {"layer": ["Bottom 50% Share", "Top 1% Share"]},
+  "spec": {
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal",
+        "axis": {"title":null, "labelAngle":0}
+      },
+      "y": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": "Share of Total Wealth",
+        "axis":{"format":"%"},
+     "stack":false,
+     "scale": {"domain":[0,0.30]}},
+
+      "color": {"datum": {"repeat": "layer"}, "title": "Percentiles",
+      "scale": {"range": ["#807dba", "#7dba94"]}},
+      "xOffset": {"datum": {"repeat": "layer"}}
+    }
+  },
+  "config": {
+    "mark": {"invalid": null}
+  }
+}

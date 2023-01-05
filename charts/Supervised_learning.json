@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/EPI_supervised_output.json",
+      "format": {"type": "json"}
+    },
+  
+    "transform": [
+      {"fold": ["continent", "pred_continent"]},
+      {"filter": {"selection": "disaster_type"}}
+    ],
+  
+    "title": {"text": "Supervised Learning: Continent Assignment on Env Indicators", "anchor": "start", "subtitle":"Test Set of 45 countries using SVC algorithm. Data Source: EPI", "subtitleFontStyle":"italic"},
+    "height": 300,
+    "width": 300,
+    "mark": {"type": "point", "filled": true, "opacity": 0.7},
+  
+    "selection": {
+      "hovering2": {"type": "point", "on": "mouseover", "nearest": false},
+      "toggle2": {"type": "multi", "fields": ["value"], "bind": "legend"},
+  
+      "disaster_type": {
+        "type": "single",
+        "fields": ["key"],
+        "bind": {
+          "input": "select",
+          "options": ["continent", "pred_continent"],
+          "labels":["Actual Continent", "Prediction"],
+          "name":"Continent Assignment"
+          }
+          }
+          
+    },
+  
+    "encoding": {
+      "x": {"field": "dim1", "type": "quantitative", "title": null},
+      "y": {"field": "dim2", "type": "quantitative", "title": null},
+      "color": {
+        "field": "value",
+        "type": "nominal",
+        "scale": {
+          "range": [
+            "#e45756",
+            "#f48518",
+            "#71b7b3",
+            "#4c78a8",
+            "#edca3b",
+            "#55a24b"
+          ]
+        },
+        "legend": {"orient": "right", "title": "Continent"}
+      },
+      "opacity": {
+        "condition": {"selection": "toggle2", "value": 0.8},
+        "value": 0
+      },
+      "size": {"condition": {"selection": "hovering2", "value": 75}, "value": 30},
+      "tooltip": [
+        {"field": "country", "title": "Country"},
+        {"field": "pred_continent", "title": "Predicted Continent"},
+        {"field": "continent", "title": "Actual Continent"}
+      ]
+    },
+    "resolve": {"scale": {"color": "independent"}}
+  }

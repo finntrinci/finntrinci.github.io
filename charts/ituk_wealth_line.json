@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Stock prices of 5 Tech Companies over Time.",
+    "title": {
+      "text": "Wealth Inequality in Italy and the UK (select a country)",
+      "subtitle": "Wealth Shares of Top 1% of Earners and Bottom 50% of Earners. Data Scource: WID",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "values": [{"Country": "Italy", "Percentile": "p0p50", "Year": "1995", "Value": 0.1022}, {"Country": "Italy", "Percentile": "p0p50", "Year": "1996", "Value": 0.0994}, {"Country": "Italy", "Percentile": "p0p50", "Year": "1997", "Value": 0.0967}, {"Country": "Italy", "Percentile": "p0p50", "Year": "1998", "Value": 0.0939}, {"Country": "Italy", "Percentile": "p0p50", "Year": "1999", "Value": 0.0903}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2000", "Value": 0.0862}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2001", "Value": 0.0748}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2002", "Value": 0.0629}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2003", "Value": 0.0667}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2004", "Value": 0.0703}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2005", "Value": 0.0642}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2006", "Value": 0.0575}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2007", "Value": 0.0514}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2008", "Value": 0.0451}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2009", "Value": 0.0377}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2010", "Value": 0.0296}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2011", "Value": 0.0233}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2012", "Value": 0.0164}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2013", "Value": 0.021}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2014", "Value": 0.0247}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2015", "Value": 0.0256}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2016", "Value": 0.0254}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2017", "Value": 0.0253}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2018", "Value": 0.0253}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2019", "Value": 0.0253}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2020", "Value": 0.0253}, {"Country": "Italy", "Percentile": "p0p50", "Year": "2021", "Value": 0.0253}, {"Country": "Italy", "Percentile": "p99p100", "Year": "1995", "Value": 0.1637}, {"Country": "Italy", "Percentile": "p99p100", "Year": "1996", "Value": 0.1657}, {"Country": "Italy", "Percentile": "p99p100", "Year": "1997", "Value": 0.1677}, {"Country": "Italy", "Percentile": "p99p100", "Year": "1998", "Value": 0.1708}, {"Country": "Italy", "Percentile": "p99p100", "Year": "1999", "Value": 0.1763}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2000", "Value": 0.1854}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2001", "Value": 0.201}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2002", "Value": 0.2134}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2003", "Value": 0.2089}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2004", "Value": 0.2069}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2005", "Value": 0.2123}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2006", "Value": 0.2183}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2007", "Value": 0.2109}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2008", "Value": 0.2061}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2009", "Value": 0.2076}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2010", "Value": 0.2197}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2011", "Value": 0.2212}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2012", "Value": 0.2355}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2013", "Value": 0.234}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2014", "Value": 0.2551}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2015", "Value": 0.2247}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2016", "Value": 0.22}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2017", "Value": 0.2211}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2018", "Value": 0.221}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2019", "Value": 0.2209}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2020", "Value": 0.2209}, {"Country": "Italy", "Percentile": "p99p100", "Year": "2021", "Value": 0.2209}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "1995", "Value": 0.0626}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "1996", "Value": 0.0506}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "1997", "Value": 0.0428}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "1998", "Value": 0.0444}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "1999", "Value": 0.0512}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2000", "Value": 0.0498}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2001", "Value": 0.0515}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2002", "Value": 0.0502}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2003", "Value": 0.0532}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2004", "Value": 0.0573}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2005", "Value": 0.0571}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2006", "Value": 0.056}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2007", "Value": 0.0601}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2008", "Value": 0.0631}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2009", "Value": 0.0482}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2010", "Value": 0.0495}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2011", "Value": 0.0422}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2012", "Value": 0.0447}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2013", "Value": 0.0427}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2014", "Value": 0.0392}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2015", "Value": 0.0453}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2016", "Value": 0.0439}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2017", "Value": 0.0428}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2018", "Value": 0.0465}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2019", "Value": 0.0465}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2020", "Value": 0.0466}, {"Country": "United Kingdom", "Percentile": "p0p50", "Year": "2021", "Value": 0.0464}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "1995", "Value": 0.1846}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "1996", "Value": 0.1888}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "1997", "Value": 0.2072}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "1998", "Value": 0.2119}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "1999", "Value": 0.2042}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2000", "Value": 0.2034}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2001", "Value": 0.2041}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2002", "Value": 0.1997}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2003", "Value": 0.1875}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2004", "Value": 0.1936}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2005", "Value": 0.2022}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2006", "Value": 0.2058}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2007", "Value": 0.2066}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2008", "Value": 0.202}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2009", "Value": 0.2001}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2010", "Value": 0.1998}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2011", "Value": 0.2018}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2012", "Value": 0.2071}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2013", "Value": 0.2258}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2014", "Value": 0.2261}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2015", "Value": 0.2148}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2016", "Value": 0.2125}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2017", "Value": 0.2114}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2018", "Value": 0.2124}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2019", "Value": 0.2111}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2020", "Value": 0.21}, {"Country": "United Kingdom", "Percentile": "p99p100", "Year": "2021", "Value": 0.213}]
+    },
+  
+    "height": 300,
+    "width": 300,
+    "mark": {"type": "line"},
+  
+    "selection": {
+        "Country": {
+          "type": "single",
+          "fields": ["Country"],
+          "bind": {
+            "input": "select",
+            "options": ["null", "Italy", "United Kingdom"],
+            "name": "Pick a country"
+          }
+        }
+      },
+  
+    "transform": [
+      {"filter":{"selection":"Country"}}
+    ],
+  
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "temporal",
+        "axis": {"title":null, "labelAngle":45, "ticks": false}
+      },
+      "y": {
+        "field": "Value",
+        "type": "quantitative",
+        "axis": {"format": "%", "title": "Share of Total Wealth", "tickCount":10},
+        "scale":{"domain":[0,0.26]}
+      },
+      "color": {
+        "field": "Percentile",
+        "type": "nominal",
+        "scale": {"range": ["#807dba", "#7dba94"]},
+        "legend": {
+          "labelExpr": "{'p99p100':'Top 1% Share', 'p0p50': 'Bottom 50% Share'}[datum.label]",
+          "title": "Legend"
+        }
+      }
+    }
+  }
