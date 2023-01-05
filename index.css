@@ -200,13 +200,15 @@ p a:hover{
 
 
 
-#ItalyGini{
-    padding-bottom:35px;
-    padding-right:0px;
+  #itukWealthSlide{
+    padding-bottom:10px;
+    padding-right:5px;
 }
-#ItalyGiniSlide{
-    padding-right: 150px;
+
+#itukWealth{
+  padding-right: 5px;
 }
+
 
 #text {
     position: static;

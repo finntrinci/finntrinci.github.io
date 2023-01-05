@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
 </head>
 
 
@@ -28,7 +28,7 @@
     <nav>
         <a class="active" href="index.html">Portfolio</a>
         <a href="project.html">Project</a>
-        <a href="https://github.com/finntrinci/finntrinci.github.io">My Github</a>
+        <a href="https://github.com/finntrinci/finntrinci.github.io">GitHub</a>
     </nav>
 
 
@@ -69,9 +69,11 @@
       
         <!-- Week 2 Starts Here -->
         <article>
-            <h2>Week 2 - Creating Graphs in Vega</h2>
+            <h2>Week 2 - Visualisation in Vega</h2>
             <p> This week we moved onto writing .json files to create graphs where the data is hosted on our Github. We looked to improve
-                <br> on a graph taken from a FT article, to make the data story more robust.</p>
+                on a graph taken from a FT article, to make the data story more robust. The 'riskiest' year in the first graph appears
+                to be 2022 in the first graph, but when adjusted as a percentge of global GDP, we see that in 1984 there is a greater 
+                outstanding credit to GDP ratio.</p>
             
         </article>
     
@@ -101,9 +103,10 @@
       
         <!-- Week 3 Starts Here -->
         <article>
-            <h2>Week 3 - Python Data Introduction</h2>
+            <h2>Week 3 - Data Manipulation in Python</h2>
             <p> This week we looked at moving a dataset from a .csv file into our .json files using python in Google CoLab. My <a href="https://colab.research.google.com/drive/1VB9VERAx9W2GCcW2oGYdSy_JPC-NXfXH?usp=sharing" target="_blank">data pipeline</a> 
-                <br> cleaned some data from the <a href="https://wid.world/" target="_blank">World Inequality Database</a> and added a new variable to colour the bars in the same way as the line chart.</p>
+                cleaned some data from the <a href="https://wid.world/" target="_blank">World Inequality Database</a> and changed the data structure to create the interactive version of 
+                the visualisation. The interactivity highlights the relative changes in wealth shares over the period with the comparison of bar sizes amplifying the disparity in wealth shares.</p>
             
         </article>
     
@@ -111,18 +114,18 @@
             <container class="container1">
 
                 <div id="text">
-                    <h3>Income Shares in Italy</h3>
-                    <p> This chart looks at the disparity in total income <br> between the top 1% of earners and bottom 50% of earners in Italy</p>
+                    <h3>Weealth Shares in Italy and the UK</h3>
+                    <p> This chart looks at the disparity in wealth ownership between <br>  the top 1% and bottom 50% of wealth holders.</p>
                 
             
-                    <div class="chart" id="ItalyGini"></div>
+                    <div class="chart" id="itukWealth"></div>
                 </div>
     
                 <div id="text">
-                    <h3>Interactive Version - Income Shares</h3>
-                    <p> This graph is an alternative visualisation, showing the change <br>in income shares explicitly through the use of a slider</p>
+                    <h3>Interactive Version - Wealth Shares</h3>
+                    <p> This graph is an alternative visualisation, showing the<br>change in wealth shares explicitly through the use of a slider</p>
     
-                    <div class="chart" id="ItalyGiniSlide"></div>
+                    <div class="chart" id="itukWealthSlide"></div>
                 
                 </div>
             </container>
@@ -156,7 +159,9 @@
         
                 <div id="text">
                     <h3>CO2 Emissions Per Capita</h3>
-                    <p>This chart shows the per capita CO2 emissions by country in 2020.</p>
+                    <p>This chart shows the per capita CO2 emissions by country in 2020. Comparing these 2 
+                        <br>figures for each country shows which countries are under/over-contributing to
+                        <br> the fund relative to their CO2 emissions.</p>
         
                     <div class="chart" id="CO2Emissions"></div>
                 
@@ -309,6 +314,52 @@
         </container>
     </section>
 
+
+    <section id="Week">
+      
+        <!-- Week 10 Starts Here -->
+        <article>
+            <h2>Week 10/11 - Machine Learning</h2>
+            <p>In the final 2 weeks we moved onto machine learning (ML) techniques. We studied a range of supervised and unsupervised ML models and discussed their use cases.
+            </p>
+                
+        </article>
+        
+     <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+        <container class="container">
+            <div id="text">
+                <h3>Unsupervised Learning - KMeans Clustering</h3>
+                <p>My unsupervised ML example clusters countries based on a range of environmental indicators. I used 
+                    <br> dimensionality reduction to create this scatter chart of the countries which shows the difference 
+                    <br> between the clustering outcome, and the grouping of the countries by continent.  Since each of the 11 
+                    <br> dimensions in this dataset decreases with greater environmental impact, countries to the top right of the 
+                    <br> graph have the 'best' environmental performance. My <a href = "https://colab.research.google.com/drive/11FRPws0JgXr-oHkosYKfknfSDddCysql?usp=sharing">Google Colab</a> notebook shows how I used data from the
+                    <br><a href="https://epi.yale.edu">Environmental Performance Index</a> site to cluster these countries.
+                </p>
+
+                <div class="chart" id="EPI_cluster_vs_continent"></div>
+            </div>
+    
+            <div id="text">
+                <h3>Supervised Learning</h3>
+                <p> For the supervised learning task, I used the same dataset, but
+                <br>here I am testing whether environmental perfromance is a 
+                <br> good predictor of the country continent. My <a href = "https://colab.research.google.com/drive/1e0T1KQv1moFVMQGL2WmuhjuxWgX5IRMj?usp=sharing">Colab</a> file shows
+                <br>how I used Support Vector Classification in sklearn to train
+                <br> the model on 135 countries, and then test the model on
+                <br> the remaining 45 countries.
+                <br>
+                <br> Since the model was 71% accurate it shows that environmental
+                <br> performance is not entirely indicative of continent. 
+                <br> So we have significant environmental performance variation
+            <br> across continents. </p>
+                    
+                
+                <div class="chart" id="EPI_supervised_learning"></div>
+            </div>
+        </container>
+    </section>
+
     
 
 
@@ -320,8 +371,8 @@
     var myChart2 = "charts/chart2_us_gundeath.json";
     var IMFChart1 = "charts/IMF_lending.json"
     var IMFChart2 = "charts/IMF_lending_fixed.json"
-    var ItalyGini = 'charts/italy_gini.json'
-    var ItalyGiniSlide = 'charts/italy_gini_slider.json'
+    var itukWealth = 'charts/ituk_wealth_line.json'
+    var itukWealthSlide = 'charts/ituk_wealth_bar_slide.json'
     var ClimateFund = 'charts/climate_fund_pledge.json'
     var CO2Emissions = 'charts/per_cap_co2.json'
     var Unemp_A_16 = 'charts/Unemp_A_16.json'
@@ -340,6 +391,9 @@
     var Festival_prices = 'charts/Festival_prices.json'
     var Festival_price_compare = 'charts/Festival_price_compare.json'
     var disaster_distribution_trellis = 'charts/disaster_distribution_trellis.json'
+    var EPI_cluster_vs_continent = 'charts/EPI_cluster_vs_continent.json'
+    var EPI_supervised_learning = 'charts/Supervised_learning.json'
+
     // these link the MyChart var to the .json chart files
 
     // Embed charts:
@@ -347,8 +401,8 @@
     vegaEmbed('#Chart2', myChart2);
     vegaEmbed('#IMFChart1', IMFChart1);
     vegaEmbed('#IMFChart2', IMFChart2);
-    vegaEmbed('#ItalyGini', ItalyGini);
-    vegaEmbed('#ItalyGiniSlide', ItalyGiniSlide);
+    vegaEmbed('#itukWealth', itukWealth);
+    vegaEmbed('#itukWealthSlide', itukWealthSlide);
     vegaEmbed('#ClimateFund', ClimateFund);
     vegaEmbed('#CO2Emissions', CO2Emissions);
     vegaEmbed('#Unemp_A_16', Unemp_A_16);
@@ -367,6 +421,8 @@
     vegaEmbed('#Festival_prices', Festival_prices);
     vegaEmbed('#Festival_price_compare', Festival_price_compare);
     vegaEmbed('#disaster_distribution_trellis', disaster_distribution_trellis);
+    vegaEmbed('#EPI_cluster_vs_continent', EPI_cluster_vs_continent);
+    vegaEmbed('#EPI_supervised_learning', EPI_supervised_learning)
 </script>
     
 
