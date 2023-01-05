@@ -1,0 +1,158 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A violin plot showing the distribution of disastrs in each cluster.",
+  "width": 400,
+  "height": 250,
+  "padding": 0,
+    "title": {
+    "text": "Violin Plot of Natural Disaster Frequency",
+    "subtitle":"Clustered based on 11 environmental performance indicators. Source: ReliefWeb and EPI",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "config": {
+    "axisBand": {"bandPosition": 1, "tickExtra": true, "tickOffset": 0}
+  },
+  "signals": [
+    {"name": "plotWidth", "update": "(width - 50)/4.5"},
+    {"name": "height", "update": "height * 1"}
+  ],
+  "data": [
+    {
+      "name": "disasters",
+      "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/dis_cluster_notype.json"
+
+    },
+    {
+      "name": "density",
+      "source": "disasters",
+      "transform": [
+        {
+          "type": "kde",
+          "field": "Count",
+          "groupby": ["cluster"],
+          "bandwidth": 0
+        }
+      ]
+    },
+    {
+      "name": "stats",
+      "source": "disasters",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["cluster"],
+          "fields": ["Count", "Count", "Count"],
+          "ops": ["q1", "median", "q3"],
+          "as": ["q1", "median", "q3"]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "layout",
+      "type": "band",
+      "range": "width",
+      "domain": {"data": "disasters", "field": "cluster", "sort":true}
+    },
+    {
+      "name": "yscale",
+      "type": "linear",
+      "range": "height",
+      "round": true,
+      "domain": {"data": "disasters", "field": "Count"},
+      "domainMin": 0,
+      "zero": false,
+      "nice": true,
+      "reverse": false
+    },
+    {
+      "name": "hscale",
+      "type": "linear",
+      "range": [0, {"signal": "plotWidth"}],
+      "domain": {"data": "density", "field": "density", "sort":true}
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "disasters", "field": "cluster", "sort":true},
+      "range": ["#e45756", "#f48518", "#71b7b3", "#4c78a8", "#edca3b", "#55a24b"]
+    }
+  ],
+  "axes": [
+    {"orient": "bottom", "scale": "layout", "zindex": 1, "title":"Cluster", "grid": true},
+    {"orient": "left", "scale": "yscale", "zindex": 1, "title":"Disasters per Year", "grid": false}
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {"data": "density", "name": "violin", "groupby": "cluster"}
+      },
+      "encode": {
+        "enter": {
+          "xc": {"scale": "layout", "field": "cluster", "band": 0.5},
+          "width": {"signal": "plotWidth"},
+          "height": {"signal": "height"}
+          
+        }
+      },
+      "data": [
+        {
+          "name": "summary",
+          "source": "stats",
+          "transform": [
+            {"type": "filter", "expr": "datum.cluster === parent.cluster"}
+          ]
+        }
+      ],
+      "marks": [
+        {
+          "type": "area",
+          "from": {"data": "violin"},
+          "encode": {
+            "enter": {
+              "orient": {"value": "horizontal"},
+              "fill": {"scale": "color", "field": {"parent": "cluster"}}
+            },
+            "update": {
+              "y": {"field": "value", "scale": "yscale"},
+              "xc": {"signal": "plotWidth/2"},
+              "width": {"scale": "hscale", "field": "density"}
+            }
+          }
+        },
+        {
+          "type": "rect",
+          "from": {"data": "summary"},
+          "encode": {
+            "enter": {"fill": {"value": "black"}, "width": {"value": 2}},
+            "update": {
+              "y": {"scale": "yscale", "field": "q1"},
+              "y2": {"scale": "yscale", "field": "q3"},
+              "xc": {"signal": "plotWidth / 2"}
+            }
+          }
+        },
+        {
+          "type": "rect",
+          "from": {"data": "summary"},
+          "encode": {
+            "enter": {
+              "fill": {"value": "black"},
+              "height": {"value": 2},
+              "width": {"value": 8}
+            },
+            "update": {
+              "y": {"scale": "yscale", "field": "median"},
+              "xc": {"signal": "plotWidth / 2"}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
