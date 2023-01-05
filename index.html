@@ -305,11 +305,16 @@
             </div>
     
             <div id="text">
-                <h3></h3>
-                <p>  </p>
+                <h3>Violin Plot of Disaster Frequency</h3>
+                <p>This graph uses 6 groups of countries which have similar
+                <br> environmental performance and shows the distribution of
+                <br> natural disasters within each cluster. We can see that <br>
+                cluster 2 has the longest right tail of its distribution, 
+                <br> while cluster 3 contains no countries with more than 2
+                <br> disasters.</p>
                     
                 
-                <div class="chart" id=""></div>
+                <div class="chart" id="disaster_cluster_violin_h"></div>
             </div>
         </container>
     </section>
@@ -393,6 +398,7 @@
     var disaster_distribution_trellis = 'charts/disaster_distribution_trellis.json'
     var EPI_cluster_vs_continent = 'charts/EPI_cluster_vs_continent.json'
     var EPI_supervised_learning = 'charts/Supervised_learning.json'
+    var disaster_cluster_violin_h = 'charts/disaster_cluster_violin_h.json'
 
     // these link the MyChart var to the .json chart files
 
@@ -422,7 +428,8 @@
     vegaEmbed('#Festival_price_compare', Festival_price_compare);
     vegaEmbed('#disaster_distribution_trellis', disaster_distribution_trellis);
     vegaEmbed('#EPI_cluster_vs_continent', EPI_cluster_vs_continent);
-    vegaEmbed('#EPI_supervised_learning', EPI_supervised_learning)
+    vegaEmbed('#EPI_supervised_learning', EPI_supervised_learning);
+    vegaEmbed('#disaster_cluster_violin_h', disaster_cluster_violin_h);
 </script>
     
 
