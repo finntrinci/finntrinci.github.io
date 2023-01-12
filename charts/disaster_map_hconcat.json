@@ -1,0 +1,167 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "config": {"background": "white", "view": {"stroke": "transparent"}},
+    "data": {
+      "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/disaster_country_year.json",
+      "format": {"type": "json"}
+    },
+    "transform": [
+      {
+        "lookup": "country_numeric",
+        "from": {
+          "data": {
+            "url": "https://unpkg.com/world-atlas@1.1.4/world/110m.json",
+            "format": {"type": "topojson", "feature": "countries"}
+          },
+          "key": "id",
+          "fields": ["type", "geometry", "properties"]
+        }
+      },
+      {
+        "lookup": "Year",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/disaster_year.json",
+            "format":{"type": "json"}
+          },
+          "key": "Year",
+          "fields": ["Count_annual"]
+        }
+      }
+    ],
+  
+          "params": [
+      {
+        "name": "minYear",
+        "value": 1990,
+        "bind": {
+          "input": "range",
+          "min": 1990,
+          "max": 2022,
+          "step": 1,
+          "name": "Year:"
+        }
+      }
+    ],
+  
+    "hconcat": [
+      {
+          "title": {
+      "text": "Climate Change Related Natural Disaster Frequency",
+      "subtitle": [
+        "Number of natural disasters since 1990. Source: ReliefWeb API.  Disasters categorised from IPCC 1.5° report."
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "middle",
+      "color": "black"
+    },
+        "projection": {"type": "naturalEarth1"},
+        "height": 300,
+        "width": 500,
+        "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+  
+        "transform": [{"filter": "datum.Year == minYear"}],
+        "encoding": {
+          "tooltip": [
+            {"field": "country_name", "title":"Country"},
+            {"field": "Count", "title": "Natural Disasters"}
+          ],
+          "color": {
+            "field": "Count",
+            "scale": {
+              "domain": [0, 1, 2, 3, 4, 5, 7, 10, 16],
+              "range": [
+                "#fcfbfd",
+                "#efedf5",
+                "#dadaeb",
+                "#bcbddc",
+                "#9e9ac8",
+                "#807dba",
+                "#6a51a3",
+                "#54278f",
+                "#3f007d"
+              ]
+            },
+            "legend": {"title": null, "orient": "left"},
+            "type": "quantitative"
+          }
+        }
+      },
+      
+      {
+          "title": {
+      "text": " ",
+      "subtitle": [
+        "The total quantity of disasters in each year."
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "middle",
+      "color": "black"
+    },
+  
+  
+        "encoding": {
+          "x": {
+            "field": "Year",
+            "type": "quantitative",
+            "scale": {"domain": [1990, 2022]},
+            "axis": {"format": ".0f"},
+            "title": ""
+          }
+        },
+        "height": 300,
+        "width": 300,
+        "layer": [
+          {
+            "encoding": {
+              "y": {
+                "field": "Count_annual",
+                "type": "quantitative",
+                "title": "Quantity of Global CCNDs"
+              }
+            },
+            "layer": [
+              {
+                "mark": {
+                  "type": "line",
+                  "color": "#7dba94",
+                  "strokeWidth": 2,
+                  "opacity": 1
+                }
+              },
+              {
+                "transform": [{"filter": "datum.Year == minYear"}],
+                "mark": {"type": "circle", "size": 150, "color": "#7dba94"}
+              }
+            ]
+          },
+          {
+            "mark": {"type":"rule", "color":"#7dba94"},
+            "encoding": {
+              "opacity": {
+                "condition": {"value": 0.2, "filter": "datum.Year == minYear"},
+                "value": 0
+              },
+              "tooltip": [
+                {
+                  "field": "Year",
+                  "type": "quantitative",
+                  "format": ".0f",
+                  "title": "Year"
+                },
+                {
+                  "field": "Count_annual",
+                  "type": "quantitative",
+                  "title": "Quantity of Global Disasters",
+                  "format": ".03"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }

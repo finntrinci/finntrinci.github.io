@@ -79,7 +79,12 @@
       "name": "color",
       "type": "ordinal",
       "domain": {"data": "disasters", "field": "cluster", "sort":true},
-      "range": ["#e45756", "#f48518", "#71b7b3", "#4c78a8", "#edca3b", "#55a24b"]
+      "range": ["#CD6A6A",
+      "#D067BD",
+      "#8F77C0",
+      "#7DBA94",
+      "#6A92CD",
+      "#D7AF60"]
     }
   ],
   "axes": [

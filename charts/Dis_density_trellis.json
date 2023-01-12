@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "CCND Frequency Distribution by Type",
+    "subtitle": [
+      "Sum of disasters by country from 1990 - present. Source: ReliefWeb.",
+      "note: Coloured by disaster type"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 500,
+  "height": 50,
+  "data": {
+    "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/disaster_country_type(1).json"
+  },
+  "transform": [{"density": "Count", "bandwidth": 0.4, "groupby": ["Type"]}],
+  "mark": "area",
+  "encoding": {
+    "row": {
+      "field": "Type",
+      "title": null,
+      "type": "nominal",
+      "spacing": -2,
+      "sort": "descending",
+      "header": {"labelAngle": 0, "labelAlign": "left"}
+    },
+    "x": {
+      "field": "value",
+      "title": "Quantity of Disasters",
+      "type": "quantitative",
+      "scale": {"domain": [1, 65]},
+      "axis": {"grid": true, "values": [1, 10, 20, 30, 40, 50, 60]}
+    },
+    "y": {
+      "field": "density",
+      "type": "quantitative",
+      "title": null,
+      "axis": null
+    },
+    "color": {
+      "field": "Type",
+      "scale": {
+        "range": [
+          "#CD6A6A",
+          "#BA7DAF",
+          "#8F77C0",
+          "#7DBA94",
+          "#6A92CD",
+          "#D7AF60"
+        ]
+      },
+      "legend": null
+    }
+  },
+  "config": {"padding": {"bottom": 0, "left": 0, "right": 0, "top": 0}},
+  "resolve": {"scale": {"y": "independent"}}
+}

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/EPI_d2_clustering.json",
+    "format": {"type": "json"}
+  },
+  "vconcat": [
+    {
+      "title": {
+        "text": ["Continent vs ML Cluster, Country Grouping.", "Continent Grouping"],
+        "subtitle": [
+          "Clustering on 11 Environmental performance indicators. Source: EPI"
+        ],
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start"
+      },
+      "height": 200,
+      "width": 200,
+      "mark": {"type": "point", "filled": true},
+      "selection": {
+        "hovering": {"type": "point", "on": "mouseover", "nearest": false},
+        "toggle": {"type": "multi", "fields": ["continent"], "bind": "legend"}
+      },
+      "encoding": {
+        "x": {"field": "dim1", "type": "quantitative", "title": null},
+        "y": {"field": "dim2", "type": "quantitative", "title": null},
+        "color": {
+          "field": "continent",
+          "type": "nominal",
+          "scale": {
+            "range": [
+              "#CD6A6A",
+              "#D067BD",
+              "#8F77C0",
+              "#7DBA94",
+              "#6A92CD",
+              "#D7AF60"
+            ]
+          },
+          "legend": {"orient": "right", "title": "Continent"}
+        },
+        "opacity": {
+          "condition": {"selection": "toggle", "value": 1},
+          "value": 0
+        },
+        "size": {
+          "condition": {"selection": "hovering", "value": 75},
+          "value": 30
+        },
+        "tooltip": [
+          {"field": "country", "title": "Country"},
+          {"field": "continent", "title": "Continent"}
+        ]
+      }
+    },
+    {
+      "title": {
+        "text": "KMeans Grouping",
+        "subtitleFontStyle": "bold",
+        "subtitleFontSize": 12,
+        "anchor": "start"
+      },
+      "height": 200,
+      "width": 200,
+      "mark": {"type": "point", "filled": true, "opacity": 1},
+      "selection": {
+        "hovering2": {"type": "point", "on": "mouseover", "nearest": false},
+        "toggle2": {"type": "multi", "fields": ["cluster"], "bind": "legend"}
+      },
+      "encoding": {
+        "x": {"field": "dim1", "type": "quantitative", "title": null},
+        "y": {"field": "dim2", "type": "quantitative", "title": null},
+        "color": {
+          "field": "cluster",
+          "type": "nominal",
+          "scale": {
+            "range": [
+              "#CD6A6A",
+              "#D067BD",
+              "#8F77C0",
+              "#7DBA94",
+              "#6A92CD",
+              "#D7AF60"
+            ]
+          },
+          "legend": {"orient": "right", "title": "Cluster"}
+        },
+        "opacity": {
+          "condition": {"selection": "toggle2", "value": 0.8},
+          "value": 0
+        },
+        "size": {
+          "condition": {"selection": "hovering2", "value": 75},
+          "value": 30
+        },
+        "tooltip": [
+          {"field": "country", "title": "Country"},
+          {"field": "cluster", "title": "Cluster Number"}
+        ]
+      }
+    }
+  ],
+  "resolve": {"scale": {"color": "independent"}},
+  "config": {"padding": {"left": 0, "right": 0},
+  "concat": {"spacing": 5}}
+}

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.2.0.json",
+  "title": {
+    "text": ["Change in Environmental Indicators and CCND", "Frequency"],
+    "subtitle": ["2012 and 2022 EPI joined by a line. Source: ReliefWeb and EPI", "note: cluster 6 had a minimal increase in Environmental Score"],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/finntrinci/finntrinci.github.io/main/data/dis_epi_clustered_compare.json"
+  },
+ "transform": [{"filter": {"selection": "disaster_type"}}],
+  "height": 200,
+  "width": 169,
+  "encoding": {
+    "x": {
+      "field": "1dim_cluster",
+      "type": "quantitative",
+      "title": "Environmental Score"
+    },
+    "y": {
+      "field": "Count_per_country",
+      "type": "quantitative",
+      "title": "Disasters per Country (2007 - 2022)",
+      "axis": {
+        "ticks": true,
+        "labelAngle": 0,
+        "labelFontSize": 8
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "detail": {"field": "Count_per_country", "type": "quantitative"},
+        "color": {"value": "#d4d4d4"}
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true},
+      "selection": {
+        "disaster_type": {
+          "type": "single",
+          "fields": ["Type"],
+          "init": {"Type": "Total"},
+          "bind": {
+            "input": "select",
+            "options": [
+              "Total",
+              "Flood",
+              "Drought",
+              "Cold/Heat Wave",
+              "Fire",
+              "Tropical Cyclone",
+              "Severe Local Storm"
+            ],
+            "labels": [
+              "All",
+              "Flood",
+              "Drought",
+              "Cold/Heat Wave",
+              "Fire",
+              "Tropical Cyclone",
+              "Severe Storm"
+            ],
+            "name": "Disaster Type"
+          }
+        }
+      },
+      "encoding": {
+        "color": {
+          "field": "cluster",
+          "type": "nominal",
+          "title": "Cluster",
+          "scale":{"range": [
+            "#CD6A6A",
+            "#D067BD",
+            "#8F77C0",
+            "#7DBA94",
+            "#6A92CD",
+            "#D7AF60"]}
+        },
+        "size": {"value": 50},
+        "opacity": {"value": 1},
+        "shape": {
+          "field": "positive",
+          "legend":{
+          "title": "Direction of Change",
+          "labelExpr": "datum.label == '1' ? 'Positive' : datum.label == '0' ? 'Negative': ''"
+          },
+          "type": "nominal"
+        },
+        "tooltip": [
+          {"field": "Count_per_country", "type": "quantitative", "format":".01f", "title":"Disasters per Country"},
+          {"field": "cluster", "type": "nominal", "title":"Cluster"},
+          {"field":"year", "type":"quantitative", "title":"Year (of Environmental Score)"}
+        ]
+      }
+    }
+  ]
+}
