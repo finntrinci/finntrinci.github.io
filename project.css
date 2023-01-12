@@ -13,7 +13,7 @@ body {
     background: radial-gradient(circle, #bbaeff 40%, #b6e6ff 80%);
     padding: 10px;
     text-align: center;
-    width: 100%;
+    width: auto;
     /* sticky so that when scrolling the nav bar stays at the top of the screen. */
     position: sticky;
     top: 0px;
@@ -83,16 +83,6 @@ body {
 }
 
 
-
-
-  
-  section#dashboard {
-    background: #e7a8f4;
-    color: #084012;
-    border-top-style: solid;
-    border-top-width: 5px;
-    border-top-color: rgba(0, 47, 167,1);
-  }
   
   article {
     width: 90%;
@@ -102,17 +92,17 @@ body {
   }
 
   
-  h1{
-    color:rgb(10, 10, 10);
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+h1 {
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+  font-size: 3em;
+  color: rgba(0, 47, 167,1);
 }
+
   h2 {
     text-align: center;
     padding: 10px 0px 0px 0px;
-    font-size: 3em;
+    font-size: 2rem;
     color: rgba(0, 47, 167,1);
   }
 
@@ -121,24 +111,41 @@ body {
 h3{
     color:rgba(0, 47, 167,1);
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 1.5rem;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 p{
     color:rgb(10, 10, 10);
     font-family: 'Poppins', sans-serif;
     font-weight: lighter;
-    font-size: 16px;
-    text-align: center;
+    font-size: 1rem;
+    text-align: justify;
     margin-top: 5px;
     margin-bottom: 5px;
     /* if i wanted to add a box around this text i could use
     padding: 10px 10px 10px 10px; 
     border-style: solid;
     border-width:2px; */
+}
+
+p#chart_label{
+  color:rgb(10, 10, 10);
+  font-family: 'Poppins';
+  font-weight: bold;
+  font-size: 1rem;
+  text-align-last: justify;
+  text-align:justify;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* if i wanted to add a box around this text i could use
+  padding: 10px 10px 10px 10px; 
+  border-style: solid;
+  border-width:2px; */
 }
 
 p a{
@@ -151,20 +158,36 @@ p a:hover{
     text-decoration: underline;
 }
 
+caption { 
+  position: absolute;
+  bottom: 0px;
+}
+
+/* horizontal line formatting */
+hr{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: transparent;
+  color: rgba(0, 47, 167,1);
+  width: 100%;
+  border-top: 5px solid ;
+  border-color: rgba(0, 47, 167,1);
+  border-radius: 40px;
+}
+
 
 /* Charts go Within, background white to stay consistent and accent border */
 .chart{
-    background-color: #ffffff;
-
-    display:inline-block;
+    background-color: #ffff;
     justify-content: center;
+    display:inline-block;
     
     border-radius: 0px;
     border-color: rgba(0, 47, 167,1);
     border-width: 3px;
     border-style: solid;
     
-    padding: 3px;
+    padding: 0.2rem;
     margin: 3px;
     z-index: 0;
 
@@ -188,23 +211,15 @@ p a:hover{
     margin: auto;
     flex-flow: wrap;
    
-    padding: 20px;
+    padding: 0px;
     
-    max-width: 1000px; 
+    max-width: fit-content;
     justify-content: center;
     align-content: center;
 
+
   }
 
-
-
-#ItalyGini{
-    padding-bottom:35px;
-    padding-right:0px;
-}
-#ItalyGiniSlide{
-    padding-right: 150px;
-}
 
 #text {
     position: static;
@@ -243,6 +258,6 @@ p a:hover{
   
   @media screen and (max-width: 600px) {
     body {
-      font-size: 11px;
+      font-size: 14px;
     }
   }
