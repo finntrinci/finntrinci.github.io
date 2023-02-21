@@ -21,9 +21,10 @@
         "Country": {
           "type": "single",
           "fields": ["Country"],
+          "init":{"Country":"United Kingdom"},
           "bind": {
             "input": "select",
-            "options": ["null", "Italy", "United Kingdom"],
+            "options": ["Italy", "United Kingdom"],
             "name": "Pick a country"
           }
         }
