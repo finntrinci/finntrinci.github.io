@@ -132,6 +132,16 @@ h3{
     margin-right: 20px;
 }
 
+h3 a{
+  color:rgba(0, 47, 167,1);
+  text-decoration: none;
+}
+
+h3 a:hover{
+  color:rgba(0, 47, 167,1);
+  text-decoration: underline;
+}
+
 p{
     color:rgb(10, 10, 10);
     font-family: 'Poppins', sans-serif;
