@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+</head>
+
+
+
+<link rel="stylesheet" href="portfolio.css">
+
+
+<body>
+<!-- This creates the header for the page -->
+    <section id="header">
+        <article>
+            <h2> <span style="color: black; font-weight: bold;">Finn Trinci</span>: Portfolio</h2>
+        </article>
+      </section>
+<!-- Here we define the top navigation section -->
+    <nav>
+        <a href="index.html">Portfolio</a>
+        <a href="project.html">Project</a>
+        <a href="https://github.com/finntrinci/finntrinci.github.io">GitHub</a>
+    </nav>
+
+
+
+<!-- the start of the actual content, we create a new section called Week which each week will be contained within.-->
+    <section id="Week">
+      
+
+        <article>
+            <h2>Week 1 - HTML & Embedding Charts</h2>
+            <p> In week 1 we learned how to embed charts, these charts were chosen from the <a href="rapidcharts.io" target="_blank">Rapid Charts</a> repository.</p>
+            
+        </article>
+    
+            <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+            <container class="container1">
+
+                <div id="text">
+                    <h3>Renewable Energy Resources</h3>
+                    <p> The first chart looks at the production of energy <br>through renewable sources in the UK.</p>
+                
+              
+                <div class="chart" id="Chart1"></div>
+                </div>
+              
+                <div id="text2">
+                    <h3>US Gun Deaths and Income by State</h3>
+                    <p>My second chart shows a scatter of gun deaths<br> and median income for US states.</p>
+                <div class="chart" id="Chart2"> </div>
+                </div>
+            </container>
+    </section>
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 2 Starts Here -->
+        <article>
+            <h2>Week 2 - Visualisation in Vega</h2>
+            <p> This week we moved onto writing .json files to create graphs where the data is hosted on our Github. We looked to improve
+                on a graph taken from a FT article, to make the data story more robust. The 'riskiest' year in the first graph appears
+                to be 2022 in the first graph, but when adjusted as a percentge of global GDP, we see that in 1984 there is a greater 
+                outstanding credit to GDP ratio.</p>
+            
+        </article>
+    
+            <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+            <container class="container1">
+
+                <div id="text">
+                    <h3>IMF Lending Chart from FT</h3>
+                    <p> The first chart is recreated from a FT article. <br> it is telling a story of rising outstanding credit <br> over the studied period.</p>
+                
+              
+                <div class="chart" id="IMFChart1"></div>
+                </div>
+              
+                <div id="text2">
+                    <h3>'Fixed' Chart</h3>
+                    <p>This chart shows the same lending figures as a <br> percentage of global GDP in each year. <br> The same data tells a different story. </p>
+                <div class="chart" id="IMFChart2"> </div>
+                </div>
+            </container>
+    </section>
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 3 Starts Here -->
+        <article>
+            <h2>Week 3 - Data Manipulation in Python</h2>
+            <p> This week we looked at moving a dataset from a .csv file into our .json files using python in Google CoLab. My <a href="https://colab.research.google.com/drive/1VB9VERAx9W2GCcW2oGYdSy_JPC-NXfXH?usp=sharing" target="_blank">data pipeline</a> 
+                cleaned some data from the <a href="https://wid.world/" target="_blank">World Inequality Database</a> and changed the data structure to create the interactive version of 
+                the visualisation. The interactivity highlights the relative changes in wealth shares over the period with the comparison of bar sizes amplifying the disparity in wealth shares.</p>
+            
+        </article>
+    
+            <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+            <container class="container1">
+
+                <div id="text">
+                    <h3>Weealth Shares in Italy and the UK</h3>
+                    <p> This chart looks at the disparity in wealth ownership between <br>  the top 1% and bottom 50% of wealth holders.</p>
+                
+            
+                    <div class="chart" id="itukWealth"></div>
+                </div>
+    
+                <div id="text">
+                    <h3>Interactive Version - Wealth Shares</h3>
+                    <p> This graph is an alternative visualisation, showing the<br>change in wealth shares explicitly through the use of a slider</p>
+    
+                    <div class="chart" id="itukWealthSlide"></div>
+                
+                </div>
+            </container>
+    </section>
+
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 4 Starts Here -->
+        <article>
+            <h2>Week 4 - Scraping</h2>
+            <p> This week we were introduced to data scraping. This <a href="https://colab.research.google.com/drive/1iDiQsrd5qvnbZraOOliIO4DhfdhWLvuH?usp=sharing" target="_blank">Google Colab</a> notebook shows how I scaped the data from a table on 
+                Wikipedia and then cleaned the data into a TIDY format. From this format I exported the data as .json and used this directly in vega-lite to create the graphs.
+                The data was scraped from <a href="https://en.wikipedia.org/wiki/Green_Climate_Fund" target="_blank">here</a>, which gets its data from the <a href="https://www.greenclimate.fund/about/resource-mobilisation" target="_blank">Green Climate Fund website</a>.</p>
+            
+        </article>
+    
+            <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+            <container class="container">
+
+                <div id="text">
+                    <h3>Green Climate Fund Contributions</h3>
+                    <p> This chart shows the per capita contributions by country to the Green Climate Fund.</p>
+                
+            
+                    <div class="chart" id="ClimateFund"></div>
+                </div>
+        
+                <div id="text">
+                    <h3>CO2 Emissions Per Capita</h3>
+                    <p>This chart shows the per capita CO2 emissions by country in 2020. Comparing these 2 
+                        <br>figures for each country shows which countries are under/over-contributing to
+                        <br> the fund relative to their CO2 emissions.</p>
+        
+                    <div class="chart" id="CO2Emissions"></div>
+                
+                </div>
+            </container>
+    </section>
+
+
+
+      <section id="Week">
+        <article>
+          <h2>Week 5 - Dashboards</h2>
+          <p> This week we worked with loops in python to quickly create a dashboard of graphs. We used the <a href="https://developer.ons.gov.uk/" target="_blank">ONS API</a> to generate a set
+            of API links to download data from. My <a href="https://colab.research.google.com/drive/1MS3h9v2SFRfU3f8S3S30XDBXQeUO7OzG?usp=sharing" target="_blank">Google Colab</a> shows the code used. In this case, since all the data was from
+            the same dataset, I just needed to change the series ID each time. The data is hosted on my Github page.</p>
+        </article>
+          <container class="container">
+                
+                <div class="chart" id="Unemp_A_16"></div>
+                <div class="chart" id="Unemp_F_16"></div>
+                <div class="chart" id="Unemp_M_16"></div>
+    
+                
+                <div class="chart" id="Unemp_12mth_A"></div>
+                <div class="chart" id="Unemp_12mth_F"></div>
+                <div class="chart" id="Unemp_12mth_M"></div>
+    
+                
+                <div class="chart" id="Unemp_lon_A"></div>
+                <div class="chart" id="Unemp_lon_F"></div>
+                <div class="chart" id="Unemp_lon_M"></div>
+    
+            </container>
+        </section>
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 7 Starts Here -->
+        <article>
+            <h2>Week 7 - Maps</h2>
+            <p>This week we worked on maps. We first needed to create a working map with a tooltip showing the name of each highlighted region.
+            My <a href="https://colab.research.google.com/drive/103IDVoBNHi6DBzga2Xix5thIhw5Oz8sL?usp=sharing" target="_blank">Google Colab</a> file shows how i used a simple scraper
+            to scrape a table of Italian region names (to match with the geojson file) and information on the number of sub-regional 'comune' are in each region.</p>
+                
+        </article>
+        
+     <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+        <container class="container1">
+            <div id="text">
+                <h3>Map of Italy With Regione Names</h3>
+                <p>Here I have created a map of Italy with regione <br> 
+                names showing up in the tooltip on hover. <br>
+                <br>
+                <br>
+                <br></p>
+
+                <div class="chart" id="ItalyMap"></div>
+            </div>
+    
+            <div id="text">
+                <h3>Quantity of Comuni per Regione in Italy</h3>
+                <p> This choropleth map shows how the distribution of 'comune' <br> 
+                (local government subdivisions within regions) is not <br>
+                due to the size of each region, with some larger regions<br>
+                like Toscana still having fewer comune than smaller regions<br>
+                like Calabria.</p>
+                    
+                
+                <div class="chart" id="ItalyComuni"></div>
+            </div>
+        </container>
+    </section>
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 8 Starts Here -->
+        <article>
+            <h2>Week 8 - Festival of Economics</h2>
+            <p>This week we attended talks at the Festival of Economics. We were tasked with creating 2 graphs which support/oppose 
+                an idea presented at a talk we attended. In the 'Big Data' talk, Arthur Turrell (Dep. Director at ONS Data Science Campus) said
+                that in the recent inflation crisis, prices of low cost goods were increasing faster than general prices. All the data used here
+                was taken from ONS supermarket website scraping. My <a href="https://colab.research.google.com/drive/1a3YLgBiUQ1Vqkm6dgizryIYfrEpy0bc8?usp=sharing">Google Colab</a> notebook shows
+                how i converted this data into TIDY format.
+            </p>
+                
+        </article>
+        
+     <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+        <container class="container">
+            <div id="text">
+                <h3>Comparison of Food Price Changes</h3>
+                <p>This chart shows the percentage change in average prices of a range of items from <br> Sept 2021 - Sept 2022.
+                    We can see that typically lower cost 'essential' goods like  <br> vegetable oil, bread, and pasta increased the most
+                    in price, supporting Arthur's argument.
+                </p>
+
+                <div class="chart" id="Festival_prices"></div>
+            </div>
+    
+            <div id="text">
+                <h3>Low-Cost Food Items vs CPIH</h3>
+                <p> When we instead compare a basket of lower cost grocery goods <br>
+                with the CPIH index (an extended measure of CPI including housing-related <br>
+                costs), we see that this basket did not increase much faster than CPIH. </p>
+                    
+                
+                <div class="chart" id="Festival_price_compare"></div>
+            </div>
+        </container>
+    </section>
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 9 Starts Here -->
+        <article>
+            <h2>Week 9 - 'Advanced' Charts</h2>
+            <p>This week we looked at creating advanced charts in Vega, such as Trellis Charts and scatters. The data used here
+                is from my final project, looking at natural disasters and the environmental performance of countries.
+            </p>
+                
+        </article>
+        
+     <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+        <container class="container">
+            <div id="text">
+                <h3>Distribution of Disaster Types since 1990</h3>
+                <p>This Trellis chart shows the distribution of natural disaster types. It is <br>
+                    evident that the natural disaster data has limited variation.
+                </p>
+
+                <div class="chart" id="disaster_distribution_trellis"></div>
+            </div>
+    
+            <div id="text">
+                <h3>Violin Plot of Disaster Frequency</h3>
+                <p>This graph uses 6 groups of countries which have similar
+                <br> environmental performance and shows the distribution of
+                <br> natural disasters within each cluster. We can see that <br>
+                cluster 2 has the longest right tail of its distribution, 
+                <br> while cluster 3 contains no countries with more than 2
+                <br> disasters.</p>
+                    
+                
+                <div class="chart" id="disaster_cluster_violin_h"></div>
+            </div>
+        </container>
+    </section>
+
+
+    <section id="Week">
+      
+        <!-- Week 10 Starts Here -->
+        <article>
+            <h2>Week 10/11 - Machine Learning</h2>
+            <p>In the final 2 weeks we moved onto machine learning (ML) techniques. We studied a range of supervised and unsupervised ML models and discussed their use cases.
+            </p>
+                
+        </article>
+        
+     <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+        <container class="container">
+            <div id="text">
+                <h3>Unsupervised Learning - KMeans Clustering</h3>
+                <p>My unsupervised ML example clusters countries based on a range of environmental indicators. I used 
+                    <br> dimensionality reduction to create this scatter chart of the countries which shows the difference 
+                    <br> between the clustering outcome, and the grouping of the countries by continent.  Since each of the 11 
+                    <br> dimensions in this dataset decreases with greater environmental impact, countries to the top right of the 
+                    <br> graph have the 'best' environmental performance. My <a href = "https://colab.research.google.com/drive/11FRPws0JgXr-oHkosYKfknfSDddCysql?usp=sharing">Google Colab</a> notebook shows how I used data from the
+                    <br><a href="https://epi.yale.edu">Environmental Performance Index</a> site to cluster these countries.
+                </p>
+
+                <div class="chart" id="EPI_cluster_vs_continent"></div>
+            </div>
+    
+            <div id="text">
+                <h3>Supervised Learning</h3>
+                <p> For the supervised learning task, I used the same dataset, but
+                <br>here I am testing whether environmental perfromance is a 
+                <br> good predictor of the country continent. My <a href = "https://colab.research.google.com/drive/1e0T1KQv1moFVMQGL2WmuhjuxWgX5IRMj?usp=sharing">Colab</a> file shows
+                <br>how I used Support Vector Classification in sklearn to train
+                <br> the model on 135 countries, and then test the model on
+                <br> the remaining 45 countries.
+                <br>
+                <br> Since the model was 71% accurate it shows that environmental
+                <br> performance is not entirely indicative of continent. 
+                <br> So we have significant environmental performance variation
+            <br> across continents. </p>
+                    
+                
+                <div class="chart" id="EPI_supervised_learning"></div>
+            </div>
+        </container>
+    </section>
+
+    
+
+
+</body>
+<!-- Chart Embeds -->
+<script>
+    //Define charts:
+    var myChart1 = "charts/chart1_renewables_source.json";
+    var myChart2 = "charts/chart2_us_gundeath.json";
+    var IMFChart1 = "charts/IMF_lending.json"
+    var IMFChart2 = "charts/IMF_lending_fixed.json"
+    var itukWealth = 'charts/ituk_wealth_line.json'
+    var itukWealthSlide = 'charts/ituk_wealth_bar_slide.json'
+    var ClimateFund = 'charts/climate_fund_pledge.json'
+    var CO2Emissions = 'charts/per_cap_co2.json'
+    var Unemp_A_16 = 'charts/Unemp_A_16.json'
+    var Unemp_F_16 = 'charts/Unemp_F_16.json'
+    var Unemp_M_16 = 'charts/Unemp_M_16.json'
+    var Unemp_12mth_A = 'charts/Unemp_12mth_A.json'
+    var Unemp_12mth_F = 'charts/Unemp_12mth_F.json'
+    var Unemp_12mth_M = 'charts/Unemp_12mth_M.json'
+    var Unemp_lon_A = 'charts/Unemp_lon_A.json'
+    var Unemp_lon_F = 'charts/Unemp_lon_F.json'
+    var Unemp_lon_M = 'charts/Unemp_lon_M.json'
+    var WorldMap = 'charts/WorldMapComplete.json'
+    var DisasterCountry = 'charts/disaster_country.json'
+    var ItalyMap = 'charts/Italy_tooltip.json'
+    var ItalyComuni = 'charts/Italy_Comuni.json'
+    var Festival_prices = 'charts/Festival_prices.json'
+    var Festival_price_compare = 'charts/Festival_price_compare.json'
+    var disaster_distribution_trellis = 'charts/disaster_distribution_trellis.json'
+    var EPI_cluster_vs_continent = 'charts/EPI_cluster_vs_continent.json'
+    var EPI_supervised_learning = 'charts/Supervised_learning.json'
+    var disaster_cluster_violin_h = 'charts/disaster_cluster_violin_h.json'
+
+    // these link the MyChart var to the .json chart files
+
+    // Embed charts:
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#IMFChart1', IMFChart1);
+    vegaEmbed('#IMFChart2', IMFChart2);
+    vegaEmbed('#itukWealth', itukWealth);
+    vegaEmbed('#itukWealthSlide', itukWealthSlide);
+    vegaEmbed('#ClimateFund', ClimateFund);
+    vegaEmbed('#CO2Emissions', CO2Emissions);
+    vegaEmbed('#Unemp_A_16', Unemp_A_16);
+    vegaEmbed('#Unemp_F_16', Unemp_F_16);
+    vegaEmbed('#Unemp_M_16', Unemp_M_16);
+    vegaEmbed('#Unemp_12mth_A', Unemp_12mth_A);
+    vegaEmbed('#Unemp_12mth_F', Unemp_12mth_F);
+    vegaEmbed('#Unemp_12mth_M', Unemp_12mth_M);
+    vegaEmbed('#Unemp_lon_A', Unemp_lon_A);
+    vegaEmbed('#Unemp_lon_F', Unemp_lon_F);
+    vegaEmbed('#Unemp_lon_M', Unemp_lon_M);
+    vegaEmbed('#WorldMap', WorldMap);
+    vegaEmbed('#DisasterCountry', DisasterCountry);
+    vegaEmbed('#ItalyMap', ItalyMap);
+    vegaEmbed('#ItalyComuni', ItalyComuni);
+    vegaEmbed('#Festival_prices', Festival_prices);
+    vegaEmbed('#Festival_price_compare', Festival_price_compare);
+    vegaEmbed('#disaster_distribution_trellis', disaster_distribution_trellis);
+    vegaEmbed('#EPI_cluster_vs_continent', EPI_cluster_vs_continent);
+    vegaEmbed('#EPI_supervised_learning', EPI_supervised_learning);
+    vegaEmbed('#disaster_cluster_violin_h', disaster_cluster_violin_h);
+</script>
+    
+
+</html>
